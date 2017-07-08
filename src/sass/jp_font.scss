@@ -1,4 +1,7 @@
+/* Google */
 $rounded_mplus_1c: "Rounded Mplus 1c";
+$mplus_1p: "Mplus 1p";
+/* typekit */
 $kozuka_gothic_pro: "kozuka-gothic-pro";
 
 .kozuka_gothic_pro_l{
@@ -20,3 +23,27 @@ $kozuka_gothic_pro: "kozuka-gothic-pro";
   font-family: $rounded_mplus_1c;
   font-weight: 200;
 }
+.rounded_mplus_1c_regular{
+  font-family: $rounded_mplus_1c;
+  font-weight: 400;
+}
+.rounded_mplus_1c_bold{
+  font-family: $rounded_mplus_1c;
+  font-weight: 600;
+}
+
+.mplus_1p_thin{
+  font-family: $mplus_1p;
+  font-weight: 200;
+}
+.mplus_1p_regular{
+  font-family: $mplus_1p;
+  font-weight: 400;
+}
+.mplus_1p_bold{
+  font-family: $mplus_1p;
+  font-weight: 600;
+}
+
+
+

@@ -10,7 +10,7 @@ import webapp2
 import settings
 from models import JpFamily
 from models import JpWeight
-
+import util
 
 # handling templates with jinja2
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
@@ -48,6 +48,8 @@ class Handler(webapp2.RequestHandler):
     def initialize(self, *a, **kw):
         webapp2.RequestHandler.initialize(self, *a, **kw)
         jp_select = self.request.cookies.get('jp')
+        if not jp_select:
+            self.set_cookie('jp', 'kozuka_gothic_pro_r')
         en_select = self.request.cookies.get('en')
         self.jp = jp_select
         self.en = en_select

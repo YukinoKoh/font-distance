@@ -6,7 +6,7 @@ from jp_center import insert_jp
 
 
 # page to layout all blogs
-class JpListOrder(Handler):
+class JpSort(Handler):
     def get(self):
         # insert font to en database
         insert_jp()
@@ -14,7 +14,7 @@ class JpListOrder(Handler):
         if self.jp:
             select_font = self.jp
         else:
-            select_font = 'kozuka_gothic_pro_r'
+            select_font = 'kozuka_gothic_pro_b'
 
         font_list = JpWeight.all()
         ref_font = JpWeight.get_by_key_name(select_font) 
@@ -41,7 +41,7 @@ class JpListOrder(Handler):
             font.put()
         log_font.sort(key = lambda x: x.distance)
         # self.response.out.write(page)
-        self.render("distance_ver.html", ref_font=ref_font,
+        self.render("jp_sort.html", ref_font=ref_font,
                     fonts = log_font, sitename=settings.SITENAME)
 
     # get key num based on weight db info

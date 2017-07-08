@@ -14,6 +14,9 @@ module.exports = function(grunt){
                 },{
                     src: config.scssDir+'jp_font.scss',
                     dest: config.cssDir+'jp_font.css'
+                },{
+                    src: config.scssDir+'en_font.scss',
+                    dest: config.cssDir+'en_font.css'
                 }]
             }
         },

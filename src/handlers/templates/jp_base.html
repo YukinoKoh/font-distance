@@ -27,12 +27,20 @@
   <body>
 
     <div class="container-fluid top-header"><div class="row top">
-      <div class="col-sm-12 top-title">
-        <a href="/">
-          {{ sitename }}
-        </a>
+      <div class="col-sm-12"> 
+        <div class="top-title">
+          <a href="/jp">
+            {{ sitename }}
+          </a>
+        </div>
+        <div class="top-nav">
+          <div class="top-nav-link">
+            <a href="/jpsort">List view</a> | <a href="/jp">Distance view</a> 
+          </div>
+        </div>
       </div>
     </div></div>
+
 
     {% block content %}
     {% endblock %}

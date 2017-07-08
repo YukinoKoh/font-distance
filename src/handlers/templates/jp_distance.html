@@ -1,0 +1,36 @@
+{% extends "jp_base.html" %}
+
+
+{% block content %}
+  <div class="container"><div class="row">
+    <div class="col-sm-12 mb-3">
+      <div class="{{ ref_font.style }}">
+        <a href="/jplist">
+          <h1>{{ ref_font.name }}</h1>
+        </a>
+        <p> This app helps you to find similar font to your choice, considering font balance, weight, and category.<br>
+          In this char, letters are positioned according to its similarity to
+          <a href="/jplist"><span class="top-font-link">{{ ref_font.name }}</span></a>.
+        </p>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="row"><div class="col-sm-12 dis-frame">
+      <div class="tooltips dis-font {{ ref_font.style }}"> 
+        あ
+        <span class="tooltipstext">{{ ref_font.name }}</span>
+      </div>
+      {% for font in fonts %}
+        <div class="tooltips dis-font {{ font.style }}" 
+           style="{{ font.get_position() }}"> あ 
+          <span class="tooltipstext">{{ font.name }}</span>
+        </div>
+      {% endfor %}
+      <div class="dis-hr"></div>
+      <div class="dis-triangle"><span class="glyphicon glyphicon-triangle-top"></span></div>
+    </div></div>
+  </div>
+{% endblock %}
+

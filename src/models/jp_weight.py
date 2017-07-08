@@ -15,5 +15,5 @@ class JpWeight(db.Model):
     distance = db.FloatProperty(required=True)
 
     def get_position(cls):
-        position_style = 'top: '+str(cls.distance*10)
+        position_style = 'left: '+ str(cls.distance*1000)+'px'
         return position_style

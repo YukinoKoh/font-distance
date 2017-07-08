@@ -9,14 +9,14 @@ from models import JpFamily
 from handlers import EnDistance
 from handlers import JpDistance
 from handlers import JpList
-from handlers import JpListOrder
+from handlers import JpSort
 from handlers import SetCookie
 import settings
 settings.init()
 
 app = webapp2.WSGIApplication([('/', EnDistance),
                                ('/jplist', JpList),
-                               ('/jporder', JpListOrder),
+                               ('/jpsort', JpSort),
                                ('/jp', JpDistance),
                                ('/~([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)',SetCookie)
                                ],

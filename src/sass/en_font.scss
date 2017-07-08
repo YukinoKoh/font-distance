@@ -1,0 +1,63 @@
+$m0: 4px;
+$m1: 8px;
+$m2: 16px;
+$m3: 24px;
+$m4: 32px;
+$m5: 40px;
+$m6: 48px;
+$m7: 56px;
+$m8: 64px;
+$m9: 72px;
+$color_mono_7: #f0f1f3;
+
+$font_helvetica: 'Helvetica', sans-serif;
+$font_libre_baskerville: 'Libre Baskerville', serif;
+$font_roboto: 'Roboto', sans-serif;
+$font_zilla_slab: 'Zilla Slab', serif;
+
+ /* font styles */
+.helvetica {
+  font-family: $font_helvetica;}
+.libre_baskerville {
+  font-family: $font_libre_baskerville;}
+.roboto {
+  font-family: $font_roboto;}
+.zilla_slab {
+  font-family: $font_zilla_slab;}
+
+.dropdown-prep{
+  float: left;
+  margin-right: $m1;
+}
+
+
+.dropdown-top{
+  float: left;
+  padding: $m2;
+  border: none;
+  background-color: $color_mono_7;
+}
+
+
+.top-button{
+  border:none;
+  background-color: $color_mono_7;
+}
+
+
+
+.dropdown-list{
+  margin-left: $m1;
+  border: none;
+}
+
+
+.dropdown-list-selected{
+  margin-left: $m1;
+  border-bottom: 1px $color_mono_7 solid;
+}
+
+option:first {
+    color: #999;
+}
+

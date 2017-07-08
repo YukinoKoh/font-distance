@@ -7,5 +7,5 @@ class SetCookie(Handler):
         lang = str(lang)
         font = str(font_style)
         self.set_cookie(lang, font)
-        url = '/jporder'
+        url = '/jpsort'
         self.redirect(url)

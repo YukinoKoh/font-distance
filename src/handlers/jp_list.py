@@ -13,12 +13,10 @@ class JpList(Handler):
         family_list = JpFamily.all()
 
         lang = 'jp'
-        if self.jp:
-            select_font = self.jp
-        else:
-            select_font = 'kozuka_gothic_pro_r'
+        select_font = self.jp
+        ref_font = JpWeight.get_by_key_name(select_font)
         self.render('font_list.html', family_list=family_list,
-                    lang=lang, select_font=select_font,
+                    lang=lang, ref_font=ref_font,
                     sitename=settings.SITENAME)
 
 
