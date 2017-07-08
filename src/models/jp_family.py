@@ -5,21 +5,28 @@ from google.appengine.ext import db
 # font db
 class JpFamily(db.Model):
     name = db.StringProperty(required=True)
+    style = db.StringProperty(required=True)
     category = db.StringProperty(required=True,
                choices=('mincho', 'gothic', 'other'))
     width = db.FloatProperty(required=True)
-    balance = db.FloatProperty(required=True)
-    line = db.FloatProperty(required=True)
-    style = db.StringProperty(required=True)
-    distance = db.FloatProperty(required=True)
+    form_balance = db.FloatProperty(required=True)
+    line_balance = db.FloatProperty(required=True)
+    angle = db.FloatProperty(required=True)
+    line_thickness = db.FloatProperty(required=True)
+    # aggregation of width, form_b
+    distance_v = db.FloatProperty(required=True)
+    # angle, line_thickness, line_b
+    distance_h = db.FloatProperty(required=True)
 
     def get_position(cls):
-        position_style = 'left: '+ str(cls.distance*1000)+'px'
+        position_style = 'left: '+str(cls.distance_h+50)+'%;top :'+str(cls.distance_v*150+50)+'%'
         return position_style
 
     def get_num(cls):
         category = cls.category
         width = cls.width
-        balance = cls.balance
-        line = cls.line
-        return category, width, balance, line
+        form_b = cls.form_balance
+        line_b = cls.line_balance
+        angle = cls.angle
+        line = cls.line_thickness
+        return category, width, form_b, line_b, angle, line

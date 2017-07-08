@@ -1,10 +1,24 @@
+/* typekit */
 /* Google */
 /* typekit */
-.noto_sans_japanese {
-  font-family: "Noto Sans Japanese"; }
+.heisei_kaku_gothic_std {
+  font-family: "heisei-kaku-gothic-std"; }
+
+.ryo_gothic_plusn {
+  font-family: "ryo-gothic-plusn"; }
+
+.a-otf_gothic_bbb_pr6n {
+  font-family: "a-otf-gothic-bbb-pr6n"; }
+
+.kozuka_gothic_pr6n {
+  font-family: "kozuka-gothic-pr6n"; }
 
 .kozuka_gothic_pro {
   font-family: "kozuka-gothic-pro"; }
+
+/* google fonts */
+.noto_sans_japanese {
+  font-family: "Noto Sans Japanese"; }
 
 .sawarabi_gothic {
   font-family: "Sawarabi Gothic"; }

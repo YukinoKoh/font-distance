@@ -5,7 +5,7 @@ from models import JpFamily
 def get_distance_list(select_font):
     font_list = JpFamily.all()
     ref_font = JpFamily.get_by_key_name(select_font)
-    # returns category name, width, balance, line
+    # returns category, width, form_b, line_b, angle, line
     ref_num = ref_font.get_num()
 
     log_font = []
@@ -17,18 +17,23 @@ def get_distance_list(select_font):
         # compare if their category, and weight are same
         elif ref_num[0] == its_num[0]:
             # compare width
-            dis_width = abs(its_num[1] - ref_num[1])
-            # compare balance
-            dis_balance = abs(its_num[2] - ref_num[2])
-            # compare line
-            dis_line = abs(its_num[3] - ref_num[3])
+            dis_width = its_num[1] - ref_num[1]
+            # compare form balance
+            dis_form_b = its_num[2] - ref_num[2]
+            # compare line balance 
+            dis_line_b = abs(its_num[3] - ref_num[3])
+            # compare angle 
+            dis_angle = abs(its_num[4] - ref_num[4])
+            # compare line thickness
+            dis_line = its_num[5] - ref_num[5]
             # scaling
-            font.distance = dis_width + dis_balance +dis_line
+            font.distance_v = dis_width + dis_form_b
+            font.distance_h = (dis_line_b + dis_angle)*dis_line
             log_font.append(font)
         else:
             font.distance = 1000.0
         font.put()
-    log_font.sort(key = lambda x: x.distance)
+    log_font.sort(key = lambda x: x.distance_v)
     return ref_font, log_font
 
 

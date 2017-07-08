@@ -18,7 +18,7 @@
 
   <div class="container">
     <div class="row"><div class="col-sm-12 dis-frame">
-      <div class="tooltips dis-font {{ ref_font.style }}"> 
+      <div class="tooltips dis-font dis-ref list-ref {{ ref_font.style }}"> 
         あ
         <span class="tooltipstext">{{ ref_font.name }}</span>
       </div>
@@ -28,8 +28,6 @@
           <span class="tooltipstext">{{ font.name }}</span>
         </div>
       {% endfor %}
-      <div class="dis-hr"></div>
-      <div class="dis-triangle"><span class="glyphicon glyphicon-triangle-top"></span></div>
     </div></div>
   </div>
 {% endblock %}
