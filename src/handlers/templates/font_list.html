@@ -1,0 +1,23 @@
+  {% extends "jp_base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+
+  <div class="row"><div class="col-sm-12 ptb-2">
+    {% for family in family_list %}
+      {% for weight in family.get_all_weight() %}
+        <a href="/~{{ lang }}/{{ weight.style }}">
+        {% if weight.style == select_font %}
+          <div class="attention {{ weight.style }}"> {{ weight.name }} <span class="glyphicon glyphicon-ok"></span></a>
+        {% else %}
+          <div class="font_list {{ weight.style }}"> {{ weight.name }}</div>
+        {% endif %}
+        </a><hr>
+      {% endfor %}
+    {% endfor %}
+  </div></div>
+
+
+</div>
+{% endblock %}
+
