@@ -1,49 +1,16 @@
 /* Google */
 /* typekit */
-.kozuka_gothic_pro_l {
-  font-family: "kozuka-gothic-pro";
-  font-weight: 200; }
+.noto_sans_japanese {
+  font-family: "Noto Sans Japanese"; }
 
-.kozuka_gothic_pro_r {
-  font-family: "kozuka-gothic-pro";
-  font-weight: 400; }
+.kozuka_gothic_pro {
+  font-family: "kozuka-gothic-pro"; }
 
-.kozuka_gothic_pro_b {
-  font-family: "kozuka-gothic-pro";
-  font-weight: 600; }
+.sawarabi_gothic {
+  font-family: "Sawarabi Gothic"; }
 
-.sawarabi_gothic_thin {
-  font-family: "Sawarabi Gothic";
-  font-weight: 200; }
+.rounded_mplus_1c {
+  font-family: "Rounded Mplus 1c"; }
 
-.sawarabi_gothic_regular {
-  font-family: "Sawarabi Gothic";
-  font-weight: 400; }
-
-.sawarabi_gothic_bold {
-  font-family: "Sawarabi Gothic";
-  font-weight: 600; }
-
-.rounded_mplus_1c_thin {
-  font-family: "Rounded Mplus 1c";
-  font-weight: 200; }
-
-.rounded_mplus_1c_regular {
-  font-family: "Rounded Mplus 1c";
-  font-weight: 400; }
-
-.rounded_mplus_1c_bold {
-  font-family: "Rounded Mplus 1c";
-  font-weight: 600; }
-
-.mplus_1p_thin {
-  font-family: "Mplus 1p";
-  font-weight: 200; }
-
-.mplus_1p_regular {
-  font-family: "Mplus 1p";
-  font-weight: 400; }
-
-.mplus_1p_bold {
-  font-family: "Mplus 1p";
-  font-weight: 600; }
+.mplus_1p {
+  font-family: "Mplus 1p"; }

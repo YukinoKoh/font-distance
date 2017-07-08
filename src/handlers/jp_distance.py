@@ -10,10 +10,9 @@ class JpDistance(Handler):
     def get(self):
         # insert font to en database
         insert_jp()
-        select_font = self.jp
+        select_font = self.init_cookie()
         fonts = util.get_distance_list(select_font)
-        # list_font = fonts[1]
-        # self.response.out.write(list_font[2].distance)
+        # self.response.out.write(select_font)
         self.render("jp_distance.html", ref_font=fonts[0], fonts=fonts[1], sitename=settings.SITENAME)
 
 

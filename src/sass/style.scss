@@ -1,6 +1,7 @@
 $font: 'Helvetica', sans-serif;
 
 $font_size_1: 48px;
+$font_size_2: 20px;
 $font_size_4: 16px;
 $font_size_5: 14px;
 $font-size: $font_size_4;
@@ -121,6 +122,9 @@ a:hover{
   color: $color_mono_1;
 }
 
+.top-intro{
+  color: $color_mono_2;
+}
 .top-font-link{
   color: $color_mono_1;
   text-decoration: underline;
@@ -193,7 +197,10 @@ a:hover{
 }
 
 /* Font sort */
+.sort-font{
+  font-size: $font_size_2;
+}
 .sort-caption{
   color: $color_mono_4;
-  font-size: 0.8em;
+  font-size: $font_size_5;
 }

@@ -7,7 +7,7 @@
         <a href="/jplist">
           <h1>{{ ref_font.name }}</h1>
         </a>
-        <p> This app helps you to find similar font to your choice, considering font balance, weight, and category.<br>
+        <p class="top-intro"> This app helps you to find similar font to your choice, considering font balance, weight, and category.<br>
           Following list is sorted according to its similarity to
           <a href="/jplist"><span class="top-font-link">{{ ref_font.name }}</span></a>.
         </p>
@@ -17,9 +17,14 @@
 
   <div class="container">
     <div class="row"><div class="col-sm-12 mt-3">
+      <div class="sort-font {{ ref_font.style }}">
+        太郎の家にも陽がサンサン。二郎の家にも陽がサンサン。文字と文字のバランス。<br>
+        <span class="sort-caption">{{ ref_font.name }}: 0.00</span>
+        <hr>
+      </div>
     {% for font in fonts %}
-      <div class="{{ font.style }}">
-        文字のあいだのバランス<br>
+      <div class="sort-font {{ font.style }}">
+        太郎の家にも陽がサンサン。二郎の家にも陽がサンサン。文字と文字のバランス。<br>
         <span class="sort-caption">{{ font.name }}: {{ font.distance }}</span>
         <hr>
       </div>

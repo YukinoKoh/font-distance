@@ -48,8 +48,15 @@ class Handler(webapp2.RequestHandler):
         webapp2.RequestHandler.initialize(self, *a, **kw)
         jp_select = self.request.cookies.get('jp')
         if not jp_select:
-            self.set_cookie('jp', 'kozuka_gothic_pro_r')
+            self.set_cookie('jp', 'kozuka_gothic_pro')
         en_select = self.request.cookies.get('en')
         self.jp = jp_select
         self.en = en_select
 
+    def init_cookie(self):
+        if self.jp:
+            ref = self.jp
+        else:
+            self.set_cookie('jp', 'kozuka_gothic_pro')
+            ref = 'kozuka_gothic_pro'
+        return ref

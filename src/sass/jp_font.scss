@@ -1,62 +1,25 @@
 /* Google */
+$noto_sans_japanese: "Noto Sans Japanese";
 $sawarabi_gothic: "Sawarabi Gothic";
 $rounded_mplus_1c: "Rounded Mplus 1c";
 $mplus_1p: "Mplus 1p";
 /* typekit */
 $kozuka_gothic_pro: "kozuka-gothic-pro";
 
-.kozuka_gothic_pro_l{
+.noto_sans_japanese{
+  font-family: $noto_sans_japanese;
+}
+.kozuka_gothic_pro{
   font-family: $kozuka_gothic_pro;
-  font-weight: 200;
 }
-.kozuka_gothic_pro_r{
-  font-family: $kozuka_gothic_pro;
-  font-weight: 400;
-}
-.kozuka_gothic_pro_b{
-  font-family: $kozuka_gothic_pro;
-  font-weight: 600;
-}
-
-
-.sawarabi_gothic_thin{
+.sawarabi_gothic{
   font-family: $sawarabi_gothic;
-  font-weight: 200;
 }
-.sawarabi_gothic_regular{
-  font-family: $sawarabi_gothic;
-  font-weight: 400;
-}
-.sawarabi_gothic_bold{
-  font-family: $sawarabi_gothic;
-  font-weight: 600;
-}
-
-
-.rounded_mplus_1c_thin{
+.rounded_mplus_1c{
   font-family: $rounded_mplus_1c;
-  font-weight: 200;
 }
-.rounded_mplus_1c_regular{
-  font-family: $rounded_mplus_1c;
-  font-weight: 400;
-}
-.rounded_mplus_1c_bold{
-  font-family: $rounded_mplus_1c;
-  font-weight: 600;
-}
-
-.mplus_1p_thin{
+.mplus_1p{
   font-family: $mplus_1p;
-  font-weight: 200;
-}
-.mplus_1p_regular{
-  font-family: $mplus_1p;
-  font-weight: 400;
-}
-.mplus_1p_bold{
-  font-family: $mplus_1p;
-  font-weight: 600;
 }
 
 

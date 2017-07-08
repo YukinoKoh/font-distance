@@ -22,10 +22,15 @@ def insert_jp():
     line = 1.0
     insert_family(family, category, width, balance, line)
 
-
     family = 'Kozuka Gothic Pro'
     width = 0.9
     balance = 0.8
+    line = 1.0
+    insert_family(family, category, width, balance, line)
+
+    family = 'Noto Sans Japanese'
+    width = 1.0
+    balance = 0.95
     line = 1.0
     insert_family(family, category, width, balance, line)
 
