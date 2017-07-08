@@ -4,7 +4,6 @@ import webapp2
 from google.appengine.ext import db
 
 from models import EnFont
-from models import JpWeight
 from models import JpFamily
 from handlers import EnDistance
 from handlers import JpDistance

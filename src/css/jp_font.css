@@ -12,6 +12,18 @@
   font-family: "kozuka-gothic-pro";
   font-weight: 600; }
 
+.sawarabi_gothic_thin {
+  font-family: "Sawarabi Gothic";
+  font-weight: 200; }
+
+.sawarabi_gothic_regular {
+  font-family: "Sawarabi Gothic";
+  font-weight: 400; }
+
+.sawarabi_gothic_bold {
+  font-family: "Sawarabi Gothic";
+  font-weight: 600; }
+
 .rounded_mplus_1c_thin {
   font-family: "Rounded Mplus 1c";
   font-weight: 200; }

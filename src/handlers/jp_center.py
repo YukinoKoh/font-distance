@@ -1,5 +1,4 @@
 from models import JpFamily
-from models import JpWeight
 
 
 def insert_jp():
@@ -8,40 +7,35 @@ def insert_jp():
     family = 'Rounded Mplus 1c'
     width = 1.1
     balance = 0.94
-    insert_family(family, category, width, balance)
-    insert_weight(family, 'Thin', 200.0)
-    insert_weight(family, 'Regular', 400.0)
-    insert_weight(family, 'Bold', 600.0)
+    line = 1.0
+    insert_family(family, category, width, balance, line)
 
     family = 'Mplus 1p'
     width = 1.1
     balance = 0.95
-    insert_family(family, category, width, balance)
-    insert_weight(family, 'Thin', 200.0)
-    insert_weight(family, 'Regular', 400.0)
-    insert_weight(family, 'Bold', 600.0)
+    line = 1.0
+    insert_family(family, category, width, balance, line)
+
+    family = 'Sawarabi Gothic'
+    width = 0.9
+    balance = 0.75
+    line = 1.0
+    insert_family(family, category, width, balance, line)
+
 
     family = 'Kozuka Gothic Pro'
     width = 0.9
     balance = 0.8
-    insert_family(family, category, width, balance)
-    insert_weight(family, 'L', 200.0)
-    insert_weight(family, 'R', 400.0)
-    insert_weight(family, 'B', 600.0)
+    line = 1.0
+    insert_family(family, category, width, balance, line)
 
 
-def insert_family(family, category, width, balance):
+def insert_family(family, category, width, balance, line):
     key_name = family.lower().replace(' ', '_')
     if not JpFamily.get_by_key_name(family):
+        style = key_name
         family_insert = JpFamily(key_name=key_name, name=family, 
                              category=category, width=width, 
-                             balance=balance).put()
+                             balance=balance, style=style,
+                             line=line, distance=0.0).put()
 
-def insert_weight(family, weight_name, weight):
-    name = family+' '+weight_name
-    family = family.lower().replace(' ', '_')
-    style = name.lower().replace(' ', '_')
-    if not JpWeight.get_by_key_name(name):
-        font_insert = JpWeight(key_name=style, family=family, 
-                               name=name, style=style,
-                               weight=weight, distance=0.0).put()

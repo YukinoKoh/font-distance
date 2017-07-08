@@ -1,19 +1,17 @@
   {% extends "jp_base.html" %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
 
   <div class="row"><div class="col-sm-12 mt-3">
     {% for family in family_list %}
-      {% for weight in family.get_all_weight() %}
-        <a href="/~{{ lang }}/{{ weight.style }}">
-        {% if weight.style == ref_font.style %}
-          <div class="list-ref {{ weight.style }}"> {{ weight.name }} <span class="glyphicon glyphicon-ok"></span></div>
+        <a href="/~{{ lang }}/{{ family.style }}">
+        {% if family.style == ref_font.style %}
+          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
         {% else %}
-          <div class="list-font {{ weight.style }}"> {{ weight.name }}</div>
+          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
         {% endif %}
         </a><hr>
-      {% endfor %}
     {% endfor %}
   </div></div>
 

@@ -9,7 +9,6 @@ import webapp2
 
 import settings
 from models import JpFamily
-from models import JpWeight
 import util
 
 # handling templates with jinja2

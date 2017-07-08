@@ -1,4 +1,5 @@
 /* Google */
+$sawarabi_gothic: "Sawarabi Gothic";
 $rounded_mplus_1c: "Rounded Mplus 1c";
 $mplus_1p: "Mplus 1p";
 /* typekit */
@@ -8,16 +9,29 @@ $kozuka_gothic_pro: "kozuka-gothic-pro";
   font-family: $kozuka_gothic_pro;
   font-weight: 200;
 }
-
 .kozuka_gothic_pro_r{
   font-family: $kozuka_gothic_pro;
   font-weight: 400;
 }
-
 .kozuka_gothic_pro_b{
   font-family: $kozuka_gothic_pro;
   font-weight: 600;
 }
+
+
+.sawarabi_gothic_thin{
+  font-family: $sawarabi_gothic;
+  font-weight: 200;
+}
+.sawarabi_gothic_regular{
+  font-family: $sawarabi_gothic;
+  font-weight: 400;
+}
+.sawarabi_gothic_bold{
+  font-family: $sawarabi_gothic;
+  font-weight: 600;
+}
+
 
 .rounded_mplus_1c_thin{
   font-family: $rounded_mplus_1c;

@@ -1,5 +1,4 @@
 from google.appengine.ext import db
-from models import JpWeight
 
 
 # Database
@@ -10,14 +9,17 @@ class JpFamily(db.Model):
                choices=('mincho', 'gothic', 'other'))
     width = db.FloatProperty(required=True)
     balance = db.FloatProperty(required=True)
+    line = db.FloatProperty(required=True)
+    style = db.StringProperty(required=True)
+    distance = db.FloatProperty(required=True)
 
-    def get_all_weight(cls):
-        family_name = cls.name.lower().replace(' ','_')
-        weight_list = JpWeight.all().order("weight").filter('family = ', family_name)
-        return weight_list
+    def get_position(cls):
+        position_style = 'left: '+ str(cls.distance*1000)+'px'
+        return position_style
 
     def get_num(cls):
         category = cls.category
         width = cls.width
         balance = cls.balance
-        return category, width, balance
+        line = cls.line
+        return category, width, balance, line
