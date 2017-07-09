@@ -19,12 +19,20 @@
   <div class="container">
     <div class="row"><div class="col-sm-12 dis-frame">
       <div class="tooltips dis-font dis-ref list-ref {{ ref_font.style }}"> 
+        {% if ref_font.lang == 'jp' %}
         あ
+        {% else %}
+        A
+        {% endif %}
         <span class="tooltipstext">{{ ref_font.name }}</span>
       </div>
       {% for font in fonts %}
-        <div class="tooltips dis-font {{ font.style }}" 
-           style="{{ font.get_position() }}"> あ 
+        <div class="tooltips dis-font {{ font.style }}" style="{{ font.get_position() }}">  
+        {% if font.lang == 'jp' %}
+        あ
+        {% else %}
+        A
+        {% endif %}
           <span class="tooltipstext">{{ font.name }}</span>
         </div>
       {% endfor %}

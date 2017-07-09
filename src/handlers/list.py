@@ -23,7 +23,7 @@ class List(Handler):
         ref_font = JpFamily.get_by_key_name(select_font)
         self.render('list.html', jp_gothic_list=jp_gothic_list,
                     jp_mincho_list=jp_mincho_list, en_sans_list=en_sans_list,
-                    ref_font=ref_font, jp_lang=jp_lang,
+                    ref_font=ref_font, jp_lang=jp_lang, en_lang=en_lang,
                     sitename=settings.SITENAME)
 
 
