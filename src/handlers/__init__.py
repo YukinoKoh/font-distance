@@ -1,8 +1,8 @@
 from handler import Handler
 from en_distance import EnDistance
-from jp_distance import JpDistance
-from jp_sort import JpSort
-from jp_list import JpList
+from distance import Distance
+from sort import Sort
+from list import List
 from set import SetCookie
 
 

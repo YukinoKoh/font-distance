@@ -1,6 +1,13 @@
-
 /* Typekit - mincho*/
-$a_otf_futo_min_a101_pr6n: "a-otf-futo-min-a101-pr6n";
+$kozuka_mincho_pr6n: "kozuka-mincho-pr6n";
+$kozuka_mincho_pro: "kozuka-mincho-pro";
+$heisei_mincho_stdn: "heisei-mincho-stdn";
+$heisei_mincho_std: "heisei-mincho-std";
+$ryo_text_plusn: "ryo-text-plusn";
+$ryo_display_plusn: "ryo-display-plusn";
+$source_han_serif_japanese: "source-han-serif-japanese";
+$a-otf_ryumin_pr6n: "a-otf-ryumin-pr6n";
+$a-otf_futo_min_a101_pr6n: "a-otf-futo-min-a101-pr6n";
 /* Google - mincho*/
 $sawarabi_mincho: "Sawarabi Mincho";
 /* typekit - gothic*/
@@ -17,7 +24,31 @@ $rounded_mplus_1c: "Rounded Mplus 1c";
 $mplus_1p: "Mplus 1p";
 
 /* Typekit - mincho*/
-.a_otf_futo_min_a101_pr6n{
+.kozuka_mincho_pr6n{
+  font-family: $kozuka_mincho_pr6n;
+}
+.kozuka_mincho_pro{
+  font-family: $kozuka_mincho_pro;
+}
+.heisei_mincho_stdn{
+  font-family: $heisei_mincho_stdn;
+}
+.heisei_mincho_std{
+  font-family: $heisei_mincho_std;
+}
+.ryo_text_plusn{
+  font-family: $ryo_text_plusn;
+}
+.ryo_display_plusn{
+  font-family: $ryo_display_plusn;
+}
+.source_han_serif_japanese{
+  font-family: $source_han_serif_japanese;
+}
+.a-otf_ryumin_pr6n{
+  font-family: $a_otf_ryumin_pr6n;
+}
+.a-otf_futo_min_a101_pr6n{
   font-family: $a_otf_futo_min_a101_pr6n;
 }
 /* google -mincho*/

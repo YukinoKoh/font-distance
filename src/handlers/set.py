@@ -3,9 +3,10 @@ import settings
 
 
 class SetCookie(Handler):
-    def get(self, lang, font_style):
+    def get(self, lang, font):
         lang = str(lang)
-        font = str(font_style)
-        self.set_cookie(lang, font)
-        url = '/jp'
+        font = str(font)
+        self.set_cookie('lang', lang)
+        self.set_cookie('font', font)
+        url = '/'
         self.redirect(url)

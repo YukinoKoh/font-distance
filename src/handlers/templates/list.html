@@ -31,6 +31,20 @@
     {% endfor %}
   </div></div>
 
+  <div class="row"><div class="col-sm-12 mt-3">
+    <div class="list-caption">Sans serif</div>
+    <hr>
+    {% for family in en_sans_list %}
+        <a href="/~{{ en_lang }}/{{ family.style }}">
+        {% if family.style == ref_font.style %}
+          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
+        {% else %}
+          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
+        {% endif %}
+        </a><hr>
+    {% endfor %}
+  </div></div>
+
 </div>
 {% endblock %}
 

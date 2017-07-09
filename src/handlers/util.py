@@ -1,22 +1,37 @@
 
 from models import JpFamily
+from models import EnFamily
+from jp_center import insert_jp
+from en_center import insert_en
 
 # pass cookie font val, which is font.style 
-def get_distance_list(select_font):
-    ref_font = JpFamily.get_by_key_name(select_font)
-    font_list = JpFamily.all()
+def get_distance_list(select_font, select_lang):
+    if select_lang == 'jp':
+        ref_font = JpFamily.get_by_key_name(select_font)
+    if select_lang == 'en':
+        ref_font = EnFamily.get_by_key_name(select_font)
+    jp_font_list = JpFamily.all()
+    en_font_list = EnFamily.all()
     # returns category, width, form_b, line_b, angle, line
-    ref_num = ref_font.get_num()
 
+    jp_log = calc_distance(ref_font, jp_font_list)
+    en_log = calc_distance(ref_font, en_font_list)
+    log_font = jp_log + en_log
+    log_font.sort(key = lambda x: x.distance_v)
+    return ref_font, log_font
+
+
+def calc_distance(ref_font, font_list):
     log_font = []
+    ref_num = ref_font.get_num()
     for font in font_list:
-        its_num = font.get_num()
         # if the font is the selected one.
         if ref_font.name == font.name:
             font.distance_v = 0.0
             font.distance_h = 0.0
         # return only in the same category
         else:
+            its_num = font.get_num()
             # compare width
             dis_width = its_num[1] - ref_num[1]
             # compare form balance
@@ -32,14 +47,15 @@ def get_distance_list(select_font):
             font.distance_h = (dis_line_b + dis_angle)*dis_line
             log_font.append(font)
         font.put()
-    log_font.sort(key = lambda x: x.distance_v)
-    return ref_font, log_font
+    return log_font
 
 def select_font(func):
     """
     A decorator to set cookie 
     """
     def set_font(self, *args, **kwargs):
+        insert_jp()
+        insert_en()
         if not self.font:
             self.set_cookie('font', 'kozuka_gothic_pro')
             self.font = self.request.cookies.get('font')
