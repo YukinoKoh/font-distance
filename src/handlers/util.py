@@ -35,7 +35,7 @@ def get_distance_list(select_font):
     log_font.sort(key = lambda x: x.distance_v)
     return ref_font, log_font
 
-def font_select(func):
+def select_font(func):
     """
     A decorator to set cookie 
     """

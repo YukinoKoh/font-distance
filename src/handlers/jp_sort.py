@@ -3,12 +3,12 @@ from handler import Handler
 from models import JpFamily
 from jp_center import insert_jp
 import util
-from util import font_select
+from util import select_font
 
 
 # page to layout all blogs
 class JpSort(Handler):
-    @font_select
+    @select_font
     def get(self):
         # insert font to en database
         insert_jp()
