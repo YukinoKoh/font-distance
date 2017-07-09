@@ -1,4 +1,3 @@
-
 from models import JpFamily
 from models import EnFamily
 from jp_center import insert_jp
@@ -6,19 +5,23 @@ from en_center import insert_en
 
 # pass cookie font val, which is font.style 
 def get_distance_list(select_font, select_lang):
-    if select_lang == 'jp':
-        ref_font = JpFamily.get_by_key_name(select_font)
-    if select_lang == 'en':
-        ref_font = EnFamily.get_by_key_name(select_font)
+    
+    ref_font = get_font(select_font, select_lang)
     jp_font_list = JpFamily.all()
     en_font_list = EnFamily.all()
-    # returns category, width, form_b, line_b, angle, line
-
     jp_log = calc_distance(ref_font, jp_font_list)
     en_log = calc_distance(ref_font, en_font_list)
     log_font = jp_log + en_log
     log_font.sort(key = lambda x: x.distance_v)
     return ref_font, log_font
+
+
+def get_font(select_font, select_lang):
+    if select_lang == 'jp':
+        ref_font = JpFamily.get_by_key_name(select_font)
+    if select_lang == 'en':
+        ref_font = EnFamily.get_by_key_name(select_font)
+    return ref_font
 
 
 def calc_distance(ref_font, font_list):
@@ -48,19 +51,3 @@ def calc_distance(ref_font, font_list):
             log_font.append(font)
         font.put()
     return log_font
-
-def select_font(func):
-    """
-    A decorator to set cookie 
-    """
-    def set_font(self, *args, **kwargs):
-        insert_jp()
-        insert_en()
-        if not self.font:
-            self.set_cookie('font', 'kozuka_gothic_pro')
-            self.font = self.request.cookies.get('font')
-        if not self.lang:
-            self.set_cookie('lang', 'jp')
-            self.lang = self.request.cookies.get('lang')
-        func(self, *args, **kwargs)
-    return set_font

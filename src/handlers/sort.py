@@ -3,7 +3,7 @@ from handler import Handler
 from models import JpFamily
 from models import EnFamily
 import util
-from util import select_font
+from handler import select_font
 
 
 # page to layout all blogs

@@ -1,8 +1,8 @@
-from handler import Handler
 import settings
+from handler import Handler
 from models import JpFamily
 import util
-from util import select_font
+from handler import select_font
 
 
 # page to layout all blogs

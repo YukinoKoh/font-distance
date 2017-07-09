@@ -4,7 +4,7 @@ from models import JpFamily
 from models import EnFamily
 from jp_center import insert_jp
 from en_center import insert_en
-from util import select_font
+from handler import select_font
 
 
 # page to layout all blogs

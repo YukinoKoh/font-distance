@@ -9,6 +9,8 @@ import webapp2
 
 import settings
 from models import JpFamily
+from jp_center import insert_jp
+from en_center import insert_en
 import util
 
 # handling templates with jinja2
@@ -44,3 +46,19 @@ class Handler(webapp2.RequestHandler):
         webapp2.RequestHandler.initialize(self, *a, **kw)
         self.font = self.request.cookies.get('font')
         self.lang = self.request.cookies.get('lang')
+
+def select_font(func):
+    """
+    A decorator to set cookie 
+    """
+    def set_font(self, *args, **kwargs):
+        insert_jp()
+        insert_en()
+        if not self.font:
+            self.redirect('~jp/kozuka_gothic_pro')
+        if not self.lang:
+            self.redirect('~jp/kozuka_gothic_pro')
+        else:
+            func(self, *args, **kwargs)
+    return set_font
+
