@@ -197,6 +197,11 @@ a:hover{
 .list-ref, .list-ref a{
   color: $color_attention;
 }
+.list-caption{
+  color: $color_mono_4;
+  font-size: $font_size_5;
+  margin: $m3 0 $m1 0;
+}
 
 /* Font sort */
 .sort-font{

@@ -30,33 +30,17 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
-    # render message page
-    def render_message(self, message):
-        self.render("message.html", sitename=settings.sitename,
-                    message=message)
-
-    def set_cookie(self, lang, font_style):
+    def set_cookie(self, key, val):
         # self.response.headers['Content-Type'] = 'text/plain'
         self.response.headers['Content-Type'] = 'text/html; charset=UTF-8'
-        cookie_key = str(lang)
-        cookie_val = str(font_style)
+        cookie_key = str(key)
+        cookie_val = str(val)
         self.response.headers.add_header(
             'Set-Cookie',
-            '%s=%s; Path=/' % (cookie_key, cookie_val))
+            '%s=%s; Path=/' % (cookie_key, cookie_val)
+             )
 
     def initialize(self, *a, **kw):
         webapp2.RequestHandler.initialize(self, *a, **kw)
-        jp_select = self.request.cookies.get('jp')
-        if not jp_select:
-            self.set_cookie('jp', 'kozuka_gothic_pro')
-        en_select = self.request.cookies.get('en')
-        self.jp = jp_select
-        self.en = en_select
-
-    def init_cookie(self):
-        if self.jp:
-            ref = self.jp
-        else:
-            self.set_cookie('jp', 'kozuka_gothic_pro')
-            ref = 'kozuka_gothic_pro'
-        return ref
+        self.font = self.request.cookies.get('font')
+        self.lang = self.request.cookies.get('lang')

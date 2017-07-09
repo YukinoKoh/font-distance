@@ -9,13 +9,15 @@ class JpList(Handler):
     def get(self):
         # insert family to en database
         insert_jp()
-        family_list = JpFamily.all()
-        lang = 'jp'
-        select_font = self.jp
-        ref_font = JpFamily.get_by_key_name(select_font)
-        self.render('font_list.html', family_list=family_list,
-                    lang=lang, ref_font=ref_font,
-                    sitename=settings.SITENAME)
+        jp_gothic_list = JpFamily.all().filter('category =','gothic')
+        jp_mincho_list = JpFamily.all().filter('category =','mincho')
+        select_font = self.font
+        self.response.out.write(select_font)
+        # ref_font = JpFamily.get_by_key_name(select_font)
+        # self.render('font_list.html', jp_gothic_list=jp_gothic_list,
+        #            jp_mincho_list=jp_mincho_list,
+        #            ref_font=ref_font,
+        #            sitename=settings.SITENAME)
 
 
     def post(self):

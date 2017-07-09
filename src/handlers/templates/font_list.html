@@ -3,8 +3,10 @@
 {% block content %}
 <div class="container">
 
+
   <div class="row"><div class="col-sm-12 mt-3">
-    {% for family in family_list %}
+    <div class="list-caption">日本語ゴシック</div>
+    {% for family in jp_gothic_list %}
         <a href="/~{{ lang }}/{{ family.style }}">
         {% if family.style == ref_font.style %}
           <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
@@ -15,6 +17,19 @@
     {% endfor %}
   </div></div>
 
+  <div class="row"><div class="col-sm-12 mt-3">
+    <div class="list-caption">日本語明朝</div>
+    <hr>
+    {% for family in jp_mincho_list %}
+        <a href="/~{{ lang }}/{{ family.style }}">
+        {% if family.style == ref_font.style %}
+          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
+        {% else %}
+          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
+        {% endif %}
+        </a><hr>
+    {% endfor %}
+  </div></div>
 
 </div>
 {% endblock %}

@@ -1,16 +1,30 @@
-/* typekit */
+
+/* Typekit - mincho*/
+$a_otf_futo_min_a101_pr6n: "a-otf-futo-min-a101-pr6n";
+/* Google - mincho*/
+$sawarabi_mincho: "Sawarabi Mincho";
+/* typekit - gothic*/
 $heisei_kaku_gothic_std: "heisei-kaku-gothic-std";
 $ryo_gothic_plusn: "ryo-gothic-plusn";
 $source_han_sans_japanese: "source-han-sans-japanese";
 $a-otf_gothic_bbb_pr6n: "a-otf-gothic-bbb-pr6n";
 $kozuka_gothic_pr6n: "kozuka-gothic-pr6n";
 $kozuka_gothic_pro: "kozuka-gothic-pro";
-/* Google */
+/* Google - gothic*/
 $noto_sans_japanese: "Noto Sans Japanese";
 $sawarabi_gothic: "Sawarabi Gothic";
 $rounded_mplus_1c: "Rounded Mplus 1c";
 $mplus_1p: "Mplus 1p";
-/* typekit */
+
+/* Typekit - mincho*/
+.a_otf_futo_min_a101_pr6n{
+  font-family: $a_otf_futo_min_a101_pr6n;
+}
+/* google -mincho*/
+.sawarabi_mincho{
+  font-family: $sawarabi_mincho;
+}
+/* typekit -gothic*/
 .heisei_kaku_gothic_std{
   font-family: $heisei_kaku_gothic_std;
 }
@@ -26,7 +40,7 @@ $mplus_1p: "Mplus 1p";
 .kozuka_gothic_pro{
   font-family: $kozuka_gothic_pro;
 }
-/* google fonts */
+/* google fonts -gothic*/
 .noto_sans_japanese{
   font-family: $noto_sans_japanese;
 }
