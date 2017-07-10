@@ -1,3 +1,14 @@
+/* google sans */
+/* google serif */
+/*common */
+/* google fonts */
+.noto_serif {
+  font-family: "Noto Serif"; }
+
+.noto_sans {
+  font-family: "Noto Sans"; }
+
+/* common */
 /* font styles */
 .helvetica {
   font-family: "Helvetica", sans-serif; }
@@ -10,28 +21,3 @@
 
 .zilla_slab {
   font-family: "Zilla Slab", serif; }
-
-.dropdown-prep {
-  float: left;
-  margin-right: 8px; }
-
-.dropdown-top {
-  float: left;
-  padding: 16px;
-  border: none;
-  background-color: #f0f1f3; }
-
-.top-button {
-  border: none;
-  background-color: #f0f1f3; }
-
-.dropdown-list {
-  margin-left: 8px;
-  border: none; }
-
-.dropdown-list-selected {
-  margin-left: 8px;
-  border-bottom: 1px #f0f1f3 solid; }
-
-option:first {
-  color: #999; }

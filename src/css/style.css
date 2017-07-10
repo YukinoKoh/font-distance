@@ -4,10 +4,14 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  color: #ababab; }
 
 .img-responsive {
   margin: 0 auto; }
+
+.ref, .ref a {
+  color: #fa3942; }
 
 /* layout */
 .mt-3 {
@@ -61,7 +65,7 @@ a:hover {
   color: #061f26; }
 
 .top-intro {
-  color: #232323; }
+  color: #ababab; }
 
 .top-font-link {
   color: #061f26;
@@ -73,9 +77,12 @@ a:hover {
   height: 500px;
   width: 100%; }
 
-.dis-font {
+.dis-font, .dis-font a {
   position: absolute;
   font-size: 24px; }
+
+.dis-else, .dis-else a {
+  color: #232323; }
 
 .dis-ref {
   top: 250px;
@@ -115,9 +122,6 @@ a:hover {
 .list-font, .list-font a {
   color: #232323; }
 
-.list-ref, .list-ref a {
-  color: #fa3942; }
-
 .list-caption {
   color: #ababab;
   font-size: 14px;
@@ -126,6 +130,9 @@ a:hover {
 /* Font sort */
 .sort-font {
   font-size: 20px; }
+
+.sort-else, .sort-else a {
+  color: #232323; }
 
 .sort-caption {
   color: #ababab;

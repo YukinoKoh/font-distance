@@ -1,4 +1,4 @@
-{% extends "jp_base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
   <div class="container"><div class="row">
@@ -7,9 +7,9 @@
         <a href="/jplist">
           <h1>{{ ref_font.name }}</h1>
         </a>
-        <p class="top-intro"> This app helps you to find similar font to your choice, considering font balance, weight, and category.<br>
-          Following list is sorted according to its similarity to
-          <a href="/list"><span class="top-font-link">{{ ref_font.name }}</span></a>.
+        <p class="top-intro"> This web app helps you to find similar fonts to your choice, looking at font balances and weight.<br>
+          the following list is sorted according to each font similarity to
+          <a href="/list/{{ view }}"><span class="top-font-link">{{ ref_font.name }}</span></a>.
         </p>
       </div>
     </div>
@@ -17,22 +17,30 @@
 
   <div class="container">
     <div class="row"><div class="col-sm-12 mt-3">
-      <div class="sort-font {{ ref_font.style }}">
-        {% if ref_font.lang == 'jp' %}
+      <div class="{{ ref_font.style }}">
+        <div class="sort-font ref">
+          {% if ref_font.lang == 'jp' %}
             永あ　太郎の家にも陽がサンサン。二郎の家にも陽がサンサン。<br>
-        {% else %}
+          {% else %}
             HxMOpI We should get out to the country more often.<br>
-        {% endif %}
+          {% endif %}
+        </div>
         <span class="sort-caption">{{ ref_font.name }}: 0.00</span>
         <hr>
       </div>
     {% for font in fonts %}
-      <div class="sort-font {{ font.style }}">
-        {% if font.lang == 'jp' %}
-            永あ　太郎の家にも陽がサンサン。二郎の家にも陽がサンサン。<br>
-        {% else %}
-            AHxMOpI We should get out to the country more often.<br>
-        {% endif %}
+      <div class="{{ font.style }}">
+        <div class="sort-font sort-else">
+          {% if font.lang == 'jp' %}
+            <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">
+              永あ　太郎の家にも陽がサンサン。二郎の家にも陽がサンサン。<br>
+            </a>
+          {% else %}
+            <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">
+              AHxMOpI We should get out to the country more often.<br>
+            </a>
+          {% endif %}
+        </div>
         <span class="sort-caption">{{ font.name }}: {{ font.distance }}</span>
         <hr>
       </div>

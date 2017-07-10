@@ -55,9 +55,9 @@ def select_font(func):
         insert_jp()
         insert_en()
         if not self.font:
-            self.redirect('~jp/kozuka_gothic_pro')
+            self.redirect('jp/kozuka_gothic_pro/distance')
         if not self.lang:
-            self.redirect('~jp/kozuka_gothic_pro')
+            self.redirect('jp/kozuka_gothic_pro/distance')
         else:
             func(self, *args, **kwargs)
     return set_font

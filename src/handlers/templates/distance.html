@@ -1,16 +1,13 @@
-{% extends "jp_base.html" %}
+{% extends "base.html" %}
 
 
 {% block content %}
   <div class="container"><div class="row">
     <div class="col-sm-12 mb-3">
       <div class="{{ ref_font.style }}">
-        <a href="/jplist">
           <h1>{{ ref_font.name }}</h1>
-        </a>
-        <p> This app helps you to find similar font to your choice, considering font balance, weight, and category.<br>
-          In this char, letters are positioned according to its similarity to
-          <a href="/list"><span class="top-font-link">{{ ref_font.name }}</span></a>.
+        <p class="top-intro"> This web app helps you to find similar fonts to your choice, looking at font balances and weight. In this chart, letters are positioned according to each font similarity to
+          <a href="/list/{{ view }}"><span class="top-font-link">{{ ref_font.name }}</span></a>.
         </p>
       </div>
     </div>
@@ -18,7 +15,7 @@
 
   <div class="container">
     <div class="row"><div class="col-sm-12 dis-frame">
-      <div class="tooltips dis-font dis-ref list-ref {{ ref_font.style }}"> 
+      <div class="tooltips dis-font dis-ref ref {{ ref_font.style }}"> 
         {% if ref_font.lang == 'jp' %}
         あ
         {% else %}
@@ -27,12 +24,12 @@
         <span class="tooltipstext">{{ ref_font.name }}</span>
       </div>
       {% for font in fonts %}
-        <div class="tooltips dis-font {{ font.style }}" style="{{ font.get_position() }}">  
-        {% if font.lang == 'jp' %}
-        あ
-        {% else %}
-        A
-        {% endif %}
+        <div class="tooltips dis-font dis-else {{ font.style }}" style="{{ font.get_position() }}">  
+          {% if font.lang == 'jp' %}
+            <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">あ</a>
+          {% else %}
+            <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">A</a>
+          {% endif %}
           <span class="tooltipstext">{{ font.name }}</span>
         </div>
       {% endfor %}

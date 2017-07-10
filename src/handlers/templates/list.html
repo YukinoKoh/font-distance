@@ -1,4 +1,4 @@
-  {% extends "jp_base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="container">
@@ -6,12 +6,12 @@
 
   <div class="row"><div class="col-sm-12 mt-3">
     <div class="list-caption">日本語ゴシック</div>
-    {% for family in jp_gothic_list %}
-        <a href="/~{{ jp_lang }}/{{ family.style }}">
-        {% if family.style == ref_font.style %}
-          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
+    {% for font in jp_gothic_list %}
+        <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">
+        {% if font.style == ref_font.style %}
+          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
         {% else %}
-          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
+          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
         </a><hr>
     {% endfor %}
@@ -20,12 +20,12 @@
   <div class="row"><div class="col-sm-12 mt-3">
     <div class="list-caption">日本語明朝</div>
     <hr>
-    {% for family in jp_mincho_list %}
-        <a href="/~{{ jp_lang }}/{{ family.style }}">
-        {% if family.style == ref_font.style %}
-          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
+    {% for font in jp_mincho_list %}
+        <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">
+        {% if font.style == ref_font.style %}
+          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
         {% else %}
-          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
+          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
         </a><hr>
     {% endfor %}
@@ -34,12 +34,12 @@
   <div class="row"><div class="col-sm-12 mt-3">
     <div class="list-caption">Sans serif</div>
     <hr>
-    {% for family in en_sans_list %}
-        <a href="/~{{ en_lang }}/{{ family.style }}">
-        {% if family.style == ref_font.style %}
-          <div class="list-ref {{ family.style }}"> {{ family.name }} <span class="glyphicon glyphicon-ok"></span></div>
+    {% for font in en_sans_list %}
+        <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">
+        {% if font.style == ref_font.style %}
+          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
         {% else %}
-          <div class="list-font {{ family.style }}"> {{ family.name }}</div>
+          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
         </a><hr>
     {% endfor %}

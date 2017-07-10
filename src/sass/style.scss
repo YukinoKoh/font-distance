@@ -41,10 +41,15 @@ body{
   margin: 0;
   padding: 0;
   letter-spacing: $font_body_sp;
+  color: $color_mono_4;
 }
 
 .img-responsive{
   margin: 0 auto;
+}
+
+.ref, .ref a{
+  color: $color_attention;
 }
 
 /* layout */
@@ -123,7 +128,7 @@ a:hover{
 }
 
 .top-intro{
-  color: $color_mono_2;
+  color: $color_mono_4;
 }
 .top-font-link{
   color: $color_mono_1;
@@ -139,10 +144,16 @@ a:hover{
 }
 
 
-.dis-font{
+.dis-font, .dis-font a{
   position: absolute;
   font-size: 24px;
 }
+
+.dis-else, .dis-else a{
+  color: $color_mono_2;
+}
+
+
 .dis-ref{
   top: 250px;
   left: 50%;
@@ -194,9 +205,6 @@ a:hover{
   color: $color_mono_2;
 }
 
-.list-ref, .list-ref a{
-  color: $color_attention;
-}
 .list-caption{
   color: $color_mono_4;
   font-size: $font_size_5;
@@ -206,6 +214,9 @@ a:hover{
 /* Font sort */
 .sort-font{
   font-size: $font_size_2;
+}
+.sort-else, .sort-else a{
+  color: $color_mono_2;
 }
 .sort-caption{
   color: $color_mono_4;
