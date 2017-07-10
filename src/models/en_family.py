@@ -26,6 +26,8 @@ class EnFamily(db.Model):
     distance_v = db.FloatProperty(required=True)
     # aggregation of m_serif, stem-horizontal, stroke axis, line thickness
     distance_h = db.FloatProperty(required=True)
+    # sum of abs of  distance_v and distance_h
+    distance = db.FloatProperty(required=True)
     lang = db.StringProperty(required=True)
 
     def get_position(cls):

@@ -17,6 +17,8 @@ class JpFamily(db.Model):
     distance_v = db.FloatProperty(required=True)
     # angle, line_thickness, line_b
     distance_h = db.FloatProperty(required=True)
+    # sum of abs of  distance_v and distance_h
+    distance = db.FloatProperty(required=True)
     lang = db.StringProperty(required=True)
 
     def get_position(cls):

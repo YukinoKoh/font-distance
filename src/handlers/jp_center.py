@@ -184,5 +184,5 @@ def insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line
                              form_balance=form_balance, style=style,
                              yoko_tate_balance=yoko_tate_balance, angle=angle, 
                              line_thickness=line_thickness, distance_v=0.0,
-                             distance_h=0.0, lang='jp').put()
+                             distance_h=0.0, distance=0.0, lang='jp').put()
 

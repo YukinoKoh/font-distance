@@ -33,5 +33,5 @@ def insertEn(name, category, width, x_height, m_serif, h_stem_horizontal_balance
                                  h_stem_horizontal_balance=h_stem_horizontal_balance,
                                  o_stroke_axis=o_stroke_axis, p_decender=p_decender,
                                  i_line_thickness=i_line_thickness, distance_v=0.0,
-                                 distance_h=0.0, lang='en').put() 
+                                 distance_h=0.0, distance=0.0, lang='en').put() 
 

@@ -12,9 +12,17 @@ def get_distance_list(select_font, select_lang):
     jp_log = calc_distance(ref_font, jp_font_list)
     en_log = calc_distance(ref_font, en_font_list)
     log_font = jp_log + en_log
-    log_font.sort(key = lambda x: x.distance_v)
     return ref_font, log_font
 
+
+def get_sorted_list(log_font):
+    sorted_font = []
+    for font in log_font:
+        font.distance = abs(font.distance_v) + abs(font.distance_h)
+        sorted_font.append(font)
+        font.put()
+    sorted_font.sort(key = lambda x: x.distance)
+    return sorted_font
 
 def get_font(select_font, select_lang):
     if select_lang == 'jp':
@@ -32,6 +40,7 @@ def calc_distance(ref_font, font_list):
         if ref_font.name == font.name:
             font.distance_v = 0.0
             font.distance_h = 0.0
+            font.distance = 0.0
         # return only in the same category
         else:
             its_num = font.get_num()
@@ -48,6 +57,7 @@ def calc_distance(ref_font, font_list):
             # scaling
             font.distance_v = dis_width + dis_form_b
             font.distance_h = (dis_line_b + dis_angle)*dis_line
+            font.distance = 0.0
             log_font.append(font)
         font.put()
     return log_font

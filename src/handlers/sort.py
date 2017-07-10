@@ -13,9 +13,10 @@ class Sort(Handler):
         # insert font to en database
         select_font = self.font
         select_lang = self.lang
-        sort_list = util.get_distance_list(select_font, select_lang)
-        self.render("sort.html", ref_font=sort_list[0],
-                    fonts=sort_list[1], sitename=settings.SITENAME)
+        distance_list = util.get_distance_list(select_font, select_lang)
+        sort_list = util.get_sorted_list(distance_list[1])
+        self.render("sort.html", ref_font=distance_list[0],
+                    fonts=sort_list, sitename=settings.SITENAME)
 
     def post(self):
         pass
