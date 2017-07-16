@@ -2,7 +2,10 @@
 $noto_sans: 'Noto Sans';
 /* google serif */
 $noto_serif: 'Noto Serif';
-/*common */
+/*typekit serif */
+$adobe_garamond: 'adobe-garamond-pro';
+
+/* common */
 $arial: 'Arial';
 $comic_sans_ms: 'Comic Sans MS';
 $courier: 'Courier';
@@ -24,7 +27,10 @@ $font_zilla_slab: 'Zilla Slab', serif;
 .noto_sans{
   font-family: $noto_sans;
 }
-/* common */
+/* typekit */
+.adobe_garamond{
+  font-family: $adobe_garamond;
+}
 
  /* font styles */
 .helvetica {

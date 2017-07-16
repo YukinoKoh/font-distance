@@ -7,15 +7,17 @@ $font_size_5: 14px;
 $font-size: $font_size_4;
 
 $color_mono_1: #061f26;
-$color_mono_2: #232323;
+$color_mono_2: #212121;
 $color_mono_3: #525252;
+$color_mono_3a: #a3a3a3;
 $color_mono_4: #ababab;
 $color_mono_5: #dcdddf;
 $color_mono_6: #e3e3e3;
 $color_mono_7: #f0f1f3;
 
 $color_brand_1: $color_mono_3;
-$color_attention: #fa3942;
+$color_attention: #ff716d;
+$color_attention1: #fa3942;
 
 $font_title_weight: 300;
 $font_title_color: #fff;
@@ -75,6 +77,12 @@ h1 a, h1 a:link, h1 a:visited, h1 a:hover{
   text-decoration: underline;
 }
 
+h2{
+  color: $color_mono_1;
+  font-size: $font_size_4;
+  font-weight: 600;
+  font-family: 'helvetica', sans-serif;
+}
 
 a:hover{
   text-decoration: none;
@@ -117,16 +125,6 @@ a:hover{
   color: $font_title_color;
 }
 
-
-.top-nav{
-  float: right;
-  color: $color_mono_4;
-}
-
-.top-nav-link a{
-  color: $color_mono_1;
-}
-
 .top-intro{
   color: $color_mono_4;
 }
@@ -135,6 +133,9 @@ a:hover{
   text-decoration: underline;
 }
 
+.top-icon{
+  width: 30px;
+}
 
 /* distance */
 .dis-frame{
@@ -201,16 +202,27 @@ a:hover{
 
 
 /* Font list page */
+.list-bg{
+  background-color: $color_mono_4;
+}
+.list-fonts{
+  margin: $m2;
+}
 .list-font, .list-font a{
-  color: $color_mono_2;
+  color: #fff;
 }
 
 .list-caption{
-  color: $color_mono_4;
+  color: $color_mono_3;
   font-size: $font_size_5;
-  margin: $m3 0 $m1 0;
+  margin: $m3 0 $m1 $m2;
 }
 
+.list-hr{
+  margin: $m1 0;
+  border: 0;
+  border-bottom: 1px solid $color_mono_3a;
+}
 /* Font sort */
 .sort-font{
   font-size: $font_size_2;
@@ -221,4 +233,32 @@ a:hover{
 .sort-caption{
   color: $color_mono_4;
   font-size: $font_size_5;
+}
+
+/* test */
+.test-containter{
+  background-color: $color_mono_5;
+  height: 100vh;
+}
+.test-intro{
+  color: $color_mono_3;
+  margin: $m2 0;
+}
+.test-intro a{
+  color: $color_mono_1;
+  text-decoration: underline;
+}
+.test-form{
+  width: 90vh; 
+  border: none;
+  padding: $m1;
+}
+/* about */
+.about{
+  color: $color_mono_3;
+  font-family: 'adobe-garamond-pro';
+}
+.about a{
+  color: $color_mono_2;
+  text-decoration: underline;
 }

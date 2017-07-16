@@ -23,6 +23,18 @@ def insert_en():
     i_line_thickness = 10.1
     insertEn(name, category, width, x_height, m_serif, h_stem_horizontal_balance, o_stroke_axis, p_decender, i_line_thickness)
 
+    category = 'serif'
+
+    name = 'Adobe Garamond'
+    width = 65.0/72.0
+    x_height = 53.0/72.0
+    m_serif = 0.0
+    h_stem_horizontal_balance = 9.0/10.0
+    o_stroke_axis = 0.0
+    p_decender = 21.0/72.0
+    i_line_thickness = 10.1
+    insertEn(name, category, width, x_height, m_serif, h_stem_horizontal_balance, o_stroke_axis, p_decender, i_line_thickness)
+
 def insertEn(name, category, width, x_height, m_serif, h_stem_horizontal_balance, o_stroke_axis, p_decender, i_line_thickness):
     key_name = name.lower().replace(' ', '_')
     if not EnFamily.get_by_key_name(name):

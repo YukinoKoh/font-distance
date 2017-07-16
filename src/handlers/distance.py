@@ -10,8 +10,13 @@ class Distance(Handler):
     @select_font
     def get(self):
         # insert font to en database
-        select_font = self.font
-        select_lang = self.lang
+        select_lang = self.latest
+        if select_lang == 'jp':
+            select_font = self.jp
+        elif select_lang == 'en':
+            select_font = self.en
+        else:
+            select_font = self.jp
         view = 'distance'
         fonts = util.get_distance_list(select_font, select_lang)
         # self.response.out.write(select_font)

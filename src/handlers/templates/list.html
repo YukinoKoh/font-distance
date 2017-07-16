@@ -1,49 +1,67 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
+<div class="container-fluid list-bg">
 
-
-  <div class="row"><div class="col-sm-12 mt-3">
-    <div class="list-caption">日本語ゴシック</div>
-    {% for font in jp_gothic_list %}
+  {% if view == 'distance' or ref_font.lang == 'jp' %}
+    <div class="row"><div class="col-sm-12 mt-3">
+      <div class="list-caption">日本語ゴシック</div>
+      <hr class="list-hr">
+      {% for font in jp_sans_list %}
         <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">
         {% if font.style == ref_font.style %}
-          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
+          <div class="ref list-fonts {{ font.style }}"> {{ font.name }}</div>
         {% else %}
-          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
+          <div class="list-font list-fonts {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
-        </a><hr>
-    {% endfor %}
-  </div></div>
+        </a><hr class="list-hr">
+      {% endfor %}
+    </div></div>
 
-  <div class="row"><div class="col-sm-12 mt-3">
-    <div class="list-caption">日本語明朝</div>
-    <hr>
-    {% for font in jp_mincho_list %}
+    <div class="row"><div class="col-sm-12 mt-3">
+      <div class="list-caption">日本語明朝</div>
+      <hr class="list-hr">
+      {% for font in jp_serif_list %}
         <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">
         {% if font.style == ref_font.style %}
-          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
+          <div class="ref list-fonts {{ font.style }}">{{ font.name }}</div>
         {% else %}
-          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
+          <div class="list-font list-fonts {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
-        </a><hr>
-    {% endfor %}
-  </div></div>
+        </a><hr class="list-hr">
+      {% endfor %}
+    </div></div>
+  {% endif %}
 
-  <div class="row"><div class="col-sm-12 mt-3">
-    <div class="list-caption">Sans serif</div>
-    <hr>
-    {% for font in en_sans_list %}
+  {% if view == 'distance' or ref_font.lang == 'en' %}
+    <div class="row"><div class="col-sm-12 mt-3">
+      <div class="list-caption">Sans Serif</div>
+      <hr class="list-hr">
+      {% for font in en_sans_list %}
         <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">
         {% if font.style == ref_font.style %}
-          <div class="ref {{ font.style }}"> {{ font.name }} <span class="glyphicon glyphicon-ok"></span></div>
+          <div class="ref list-fonts {{ font.style }}">{{ font.name }}</div>
         {% else %}
-          <div class="list-font {{ font.style }}"> {{ font.name }}</div>
+          <div class="list-font list-fonts {{ font.style }}"> {{ font.name }}</div>
         {% endif %}
-        </a><hr>
-    {% endfor %}
-  </div></div>
+        </a><hr class="list-hr">
+      {% endfor %}
+    </div></div>
+
+    <div class="row"><div class="col-sm-12 mt-3">
+      <div class="list-caption">Serif</div>
+      <hr class="list-hr">
+      {% for font in en_serif_list %}
+        <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">
+        {% if font.style == ref_font.style %}
+          <div class="ref list-fonts {{ font.style }}">{{ font.name }}</div>
+        {% else %}
+          <div class="list-font list-fonts {{ font.style }}"> {{ font.name }}</div>
+        {% endif %}
+        </a><hr class="list-hr">
+      {% endfor %}
+    </div></div>
+  {% endif %}
 
 </div>
 {% endblock %}

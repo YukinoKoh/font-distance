@@ -23,28 +23,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/jp_font.css">
+    <link rel="stylesheet" href="/css/en_font.css">
+    <link rel="stylesheet" href="/css/simple-sidebar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+  <div id="wrapper">
 
+     <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a id="menu-close"><img class="top-icon" src="/img/icon_close.svg"></a></li>
+                <li><a href="/">Font Distance</a></li>
+                <li><a href="/sort/jp">Similar Fonts (JP)</a></li>
+                <li><a href="/sort/en">Similar Fonts (En)</a></li>
+                <li><a href="/typeset">Font Test</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
     <div class="container-fluid top-header"><div class="row top">
       <div class="col-sm-12"> 
         <div class="top-title">
+          <a href="#menu-toggle" class="sidebar-btn" id="menu-toggle"><img class="top-icon" src="/img/icon_hamburger.svg"></a>
           <a href="/">
             {{ sitename }}
           </a>
         </div>
-        <div class="top-nav">
-          <div class="top-nav-link">
-            <a href="/sort">Sorted view</a> | <a href="/">Distance view</a> 
-          </div>
-        </div>
       </div>
     </div></div>
+    </div>
 
 
     {% block content %}
     {% endblock %}
+  </div>
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
   </body>
 </html>

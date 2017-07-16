@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <div class="container"><div class="row">
+    <div class="col-sm-12 mb-3 about">
+      <!-- what is this app -->
+      <h2>About Font Distance</h2>
+      <p>This web app helps you to find similar fonts to your choice, looking at font balances and weight.<br>
+       I hope this project help you when you are choosing fonts for a project that involves Japanese writing and English writing.
+       I myself find it not wasy to set fonts for such projects, because a challenge in the process is balancing 2 different font families which have in a way completely different evolving histories. For this reason I appreciate fonts designed for contents with various languages, such as <a href="https://www.google.com/get/noto/" target="_blank">Goolge Noto Fonts</a>, or <a href="https://source.typekit.com/source-han-serif/" target="_blank">Adobe Source Han Serif</a>. At the same time I think possible combinations of fonts vary, as people write various things. </p> 
+       <p>With this app you can see overall font relationships in <a href="/">Font Distance</a>, test typing with selected fonts in <a href="/type">Font Test</a>, and look up similar fonts in <a href="/sort/jp">Similar Fonts in Japanese</a>, or in <a href="/sort/en">Similar Fonts in English</a>. Due to data size, these fonts do not support open type function.</p>
+        <!-- how to calc distance -->
+        <p>To calculate 'font distance', this app compare params of each fonts, for example, line width, character width, ratio of x-height to caps height, which I added individually.</p>
+       <!-- ref -->
+       <p> I started this project after inspired by <a href="http://fontmap.ideo.com/" target="_blank">Font Map</a>, which supprted by machine learning technique. My app is not directly supported by machine learning, rather it is hand tweeked project, but several concept and techniques of machine learning gave me hint while I was thinking its algorithm.</p>
+      <p>Hope you enjoy it!<br><a href="https://yukinokoh.github.io/">Yukino</a></p>
+
+    </div></div>
+  </div>
+{% endblock %}

@@ -15,6 +15,15 @@ def get_distance_list(select_font, select_lang):
     return ref_font, log_font
 
 
+def get_log_list(select_font, select_lang):
+    ref_font = get_font(select_font, select_lang)
+    if select_lang == 'jp':
+        font_list = JpFamily.all()
+    else:
+        font_list = EnFamily.all()
+    log_list = calc_distance(ref_font, font_list)
+    return ref_font, log_list
+
 def get_sorted_list(log_font):
     sorted_font = []
     for font in log_font:
@@ -27,7 +36,7 @@ def get_sorted_list(log_font):
 def get_font(select_font, select_lang):
     if select_lang == 'jp':
         ref_font = JpFamily.get_by_key_name(select_font)
-    if select_lang == 'en':
+    else:
         ref_font = EnFamily.get_by_key_name(select_font)
     return ref_font
 

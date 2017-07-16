@@ -12,6 +12,9 @@ module.exports = function(grunt){
                     src: config.scssDir+'style.scss',
                     dest: config.cssDir+'style.css'
                 },{
+                    src: config.scssDir+'simple-sidebar.scss',
+                    dest: config.cssDir+'simple-sidebar.css'
+                },{
                     src: config.scssDir+'jp_font.scss',
                     dest: config.cssDir+'jp_font.css'
                 },{

@@ -11,7 +11,7 @@ body {
   margin: 0 auto; }
 
 .ref, .ref a {
-  color: #fa3942; }
+  color: #ff716d; }
 
 /* layout */
 .mt-3 {
@@ -28,6 +28,12 @@ h1 {
 h1 a, h1 a:link, h1 a:visited, h1 a:hover {
   color: #061f26;
   text-decoration: underline; }
+
+h2 {
+  color: #061f26;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'helvetica', sans-serif; }
 
 a:hover {
   text-decoration: none; }
@@ -57,19 +63,15 @@ a:hover {
 .top-title a {
   color: #fff; }
 
-.top-nav {
-  float: right;
-  color: #ababab; }
-
-.top-nav-link a {
-  color: #061f26; }
-
 .top-intro {
   color: #ababab; }
 
 .top-font-link {
   color: #061f26;
   text-decoration: underline; }
+
+.top-icon {
+  width: 30px; }
 
 /* distance */
 .dis-frame {
@@ -82,7 +84,7 @@ a:hover {
   font-size: 24px; }
 
 .dis-else, .dis-else a {
-  color: #232323; }
+  color: #212121; }
 
 .dis-ref {
   top: 250px;
@@ -104,7 +106,7 @@ a:hover {
   font-size: 14px;
   font-weight: lighter;
   visibility: hidden;
-  color: #232323;
+  color: #212121;
   width: 120px;
   background-color: #e3e3e3;
   border-radius: 6px;
@@ -119,21 +121,59 @@ a:hover {
   visibility: visible; }
 
 /* Font list page */
+.list-bg {
+  background-color: #ababab; }
+
+.list-fonts {
+  margin: 16px; }
+
 .list-font, .list-font a {
-  color: #232323; }
+  color: #fff; }
 
 .list-caption {
-  color: #ababab;
+  color: #525252;
   font-size: 14px;
-  margin: 24px 0 8px 0; }
+  margin: 24px 0 8px 16px; }
+
+.list-hr {
+  margin: 8px 0;
+  border: 0;
+  border-bottom: 1px solid #a3a3a3; }
 
 /* Font sort */
 .sort-font {
   font-size: 20px; }
 
 .sort-else, .sort-else a {
-  color: #232323; }
+  color: #212121; }
 
 .sort-caption {
   color: #ababab;
   font-size: 14px; }
+
+/* test */
+.test-containter {
+  background-color: #dcdddf;
+  height: 100vh; }
+
+.test-intro {
+  color: #525252;
+  margin: 16px 0; }
+
+.test-intro a {
+  color: #061f26;
+  text-decoration: underline; }
+
+.test-form {
+  width: 90vh;
+  border: none;
+  padding: 8px; }
+
+/* about */
+.about {
+  color: #525252;
+  font-family: 'adobe-garamond-pro'; }
+
+.about a {
+  color: #212121;
+  text-decoration: underline; }

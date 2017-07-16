@@ -44,8 +44,10 @@ class Handler(webapp2.RequestHandler):
 
     def initialize(self, *a, **kw):
         webapp2.RequestHandler.initialize(self, *a, **kw)
-        self.font = self.request.cookies.get('font')
-        self.lang = self.request.cookies.get('lang')
+        self.jp = self.request.cookies.get('jp')
+        self.en = self.request.cookies.get('en')
+        self.content = self.request.cookies.get('content')
+        self.latest = self.request.cookies.get('latest')
 
 def select_font(func):
     """
@@ -54,10 +56,14 @@ def select_font(func):
     def set_font(self, *args, **kwargs):
         insert_jp()
         insert_en()
-        if not self.font:
-            self.redirect('jp/kozuka_gothic_pro/distance')
-        if not self.lang:
-            self.redirect('jp/kozuka_gothic_pro/distance')
+        if not self.jp:
+            self.set_cookie('jp', 'kozuka_gothic_pro')
+        if not self.en:
+            self.set_cookie('en', 'noto_sans')
+        if not self.content:
+            self.set_cookie('content', 'Test typing')
+        if not self.latest:
+            self.redirect('/jp/kozuka_gothic_pro/distance')
         else:
             func(self, *args, **kwargs)
     return set_font

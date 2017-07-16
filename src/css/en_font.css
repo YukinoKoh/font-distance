@@ -1,6 +1,7 @@
 /* google sans */
 /* google serif */
-/*common */
+/*typekit serif */
+/* common */
 /* google fonts */
 .noto_serif {
   font-family: "Noto Serif"; }
@@ -8,7 +9,10 @@
 .noto_sans {
   font-family: "Noto Sans"; }
 
-/* common */
+/* typekit */
+.adobe_garamond {
+  font-family: "adobe-garamond-pro"; }
+
 /* font styles */
 .helvetica {
   font-family: "Helvetica", sans-serif; }
