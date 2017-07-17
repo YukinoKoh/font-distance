@@ -1,44 +1,68 @@
 /* google sans */
 $noto_sans: 'Noto Sans';
+/* typekit sans */
+$eurostile: 'eurostile';
+$franklin_gothic_urw: 'franklin-gothic-urw';
+/* typekit and open */
+$fira_sans: 'fira-sans-2';
 /* google serif */
 $noto_serif: 'Noto Serif';
 /*typekit serif */
 $adobe_garamond: 'adobe-garamond-pro';
+$adobe_calson: 'adobe-caslon-pro';
+$baskerville_urw: 'baskerville-urw';
+$bodoni_urw: 'bodoni-urw';
+$fira_mono: 'fira-mono';
 
 /* common */
-$arial: 'Arial';
-$comic_sans_ms: 'Comic Sans MS';
-$courier: 'Courier';
 $courier_new: 'Courier New';
 $georgia: 'Georgia';
 $times_new_roman: 'Times New Roman';
-$trebuchet_ms: 'Trebuchet MS';
 $verdana: 'Verdana';
 
-$font_helvetica: 'Helvetica', sans-serif;
-$font_libre_baskerville: 'Libre Baskerville', serif;
 $font_roboto: 'Roboto', sans-serif;
-$font_zilla_slab: 'Zilla Slab', serif;
 
-/* google fonts */
-.noto_serif{
-  font-family: $noto_serif;
-}
+/* google sans */
 .noto_sans{
   font-family: $noto_sans;
 }
-/* typekit */
+/* typekit sans */
+.eurostile{
+  font-family: $eurostile;
+}
+.franklin_gothic_urw{
+  font-family: $franklin_gothic_urw;
+}
+.fira_sans{
+  font-family: $fira_sans;
+}
+/* google fonts serif*/
+.noto_serif{
+  font-family: $noto_serif;
+}
+/* typekit serif*/
 .adobe_garamond{
   font-family: $adobe_garamond;
 }
-
- /* font styles */
-.helvetica {
-  font-family: $font_helvetica;}
-.libre_baskerville {
-  font-family: $font_libre_baskerville;}
-.roboto {
-  font-family: $font_roboto;}
-.zilla_slab {
-  font-family: $font_zilla_slab;}
-
+.adobe_calson{
+  font-family: $adobe_calson;
+}
+.baskerville_urw{
+  font-family: $baskerville_urw;
+}
+.bodoni_urw{
+  font-family: $bodoni_urw;
+}
+ /* common */
+.courier_new{
+  font-family: $courier_new;
+}
+.georgia{
+  font-family: $georgia;
+}
+.times_new_roman{
+  font-family: $times_new_roman;
+}
+.verdana{
+  font-family: $verdana;
+}

@@ -20,6 +20,10 @@ body {
 .mb-3 {
   margin-bottom: 24px; }
 
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
 /* type set */
 h1 {
   color: #061f26;
@@ -79,9 +83,17 @@ a:hover {
   height: 500px;
   width: 100%; }
 
+.dis-en {
+  font-size: 24px; }
+
+.dis-jp {
+  font-size: 20px; }
+
 .dis-font, .dis-font a {
   position: absolute;
-  font-size: 24px; }
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  /* For IE8 and earlier */ }
 
 .dis-else, .dis-else a {
   color: #212121; }
@@ -165,9 +177,20 @@ a:hover {
   text-decoration: underline; }
 
 .test-form {
-  width: 90vh;
-  border: none;
+  margin: 8px; }
+
+.test-textarea {
+  color: #061f26;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #dcdddf;
   padding: 8px; }
+
+.test-en {
+  font-size: 1em; }
+
+.test-jp {
+  font-size: 0.8em; }
 
 /* about */
 .about {

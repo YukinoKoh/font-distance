@@ -13,6 +13,7 @@ class JpFamily(db.Model):
     yoko_tate_balance = db.FloatProperty(required=True)
     angle = db.FloatProperty(required=True)
     line_thickness = db.FloatProperty(required=True)
+    design = db.StringProperty(required=True)
     # aggregation of width, form_b
     distance_v = db.FloatProperty(required=True)
     # angle, line_thickness, line_b
@@ -22,14 +23,14 @@ class JpFamily(db.Model):
     lang = db.StringProperty(required=True)
 
     def get_position(cls):
-        position_style = 'left: '+str(cls.distance_h+50)+'%;top :'+str(cls.distance_v*150+50)+'%'
+        position_style = 'left: '+str(cls.distance_h*10+10)+'%;top :'+str(cls.distance_v*5+50)+'%'
         return position_style
 
     def get_num(cls):
         category = cls.category
         num1 = cls.width
-        num2 = cls.form_balance
+        num2 = cls.form_balance *2
         num3 = cls.yoko_tate_balance
-        num4 = cls.angle
-        num5 = cls.line_thickness
+        num4 = cls.angle *0.01
+        num5 = cls.line_thickness *0.15
         return category, num1, num2, num3, num4, num5

@@ -4,12 +4,12 @@ from google.appengine.ext import db
 # Database
 # font db
 class EnFamily(db.Model):
-    # width = x A width / A height
+    # width = x A width / cap height
     # x height = x height / cap height
     # m serif = serif length of m 500% chrome screen - font-size 20px
     # h_stem_horizontal_balance = H horizontal height / H stem width
     # o_stroke_axis = angle 0 - vertical  
-    # p_decender = length of p decender 500% chrome screen - font-size 20px
+    # p_decender = length of p decender / cap height
     # i_line_thickness: thickness of i 500% chrome screen - font-size 20px
     name = db.StringProperty(required=True)
     style = db.StringProperty(required=True)
@@ -22,6 +22,7 @@ class EnFamily(db.Model):
     o_stroke_axis = db.FloatProperty(required=True)
     p_decender = db.FloatProperty(required=True)
     i_line_thickness = db.FloatProperty(required=True)
+    design = db.StringProperty(required=True)
     # aggregation of width, x-height, decender
     distance_v = db.FloatProperty(required=True)
     # aggregation of m_serif, stem-horizontal, stroke axis, line thickness
@@ -31,7 +32,7 @@ class EnFamily(db.Model):
     lang = db.StringProperty(required=True)
 
     def get_position(cls):
-        position_style = 'left: '+str(cls.distance_h+50)+'%;top :'+str(cls.distance_v*150+50)+'%'
+        position_style = 'left: '+str(cls.distance_h*10+10)+'%;top :'+str(cls.distance_v*5+50)+'%'
         return position_style
 
     def get_num(cls):
@@ -44,8 +45,8 @@ class EnFamily(db.Model):
         p_decender  = cls.p_decender
         i_line_thickness = cls.i_line_thickness
         num1 = width
-        num2 = x_height + p_decender/2
+        num2 = x_height + p_decender
         num3 = h_stem_horizontal_balance
         num4 = o_stroke_axis+m_serif + m_serif
-        num5 = i_line_thickness        
+        num5 = i_line_thickness
         return category, num1, num2, num3, num4, num5 

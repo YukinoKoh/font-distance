@@ -46,7 +46,6 @@ class Handler(webapp2.RequestHandler):
         webapp2.RequestHandler.initialize(self, *a, **kw)
         self.jp = self.request.cookies.get('jp')
         self.en = self.request.cookies.get('en')
-        self.content = self.request.cookies.get('content')
         self.latest = self.request.cookies.get('latest')
 
 def select_font(func):
@@ -60,8 +59,6 @@ def select_font(func):
             self.set_cookie('jp', 'kozuka_gothic_pro')
         if not self.en:
             self.set_cookie('en', 'noto_sans')
-        if not self.content:
-            self.set_cookie('content', 'Test typing')
         if not self.latest:
             self.redirect('/jp/kozuka_gothic_pro/distance')
         else:

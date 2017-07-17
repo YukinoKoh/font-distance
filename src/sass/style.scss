@@ -64,6 +64,11 @@ body{
   margin-bottom: $m3;
 }
 
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
 
 /* type set */
 h1{
@@ -143,11 +148,17 @@ a:hover{
   height: 500px;
   width: 100%;
 }
-
+.dis-en{
+  font-size: 24px;
+}
+.dis-jp{
+  font-size: 20px;
+}
 
 .dis-font, .dis-font a{
   position: absolute;
-  font-size: 24px;
+  opacity: 0.9;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
 .dis-else, .dis-else a{
@@ -249,9 +260,20 @@ a:hover{
   text-decoration: underline;
 }
 .test-form{
-  width: 90vh; 
-  border: none;
+  margin: $m1;
+}
+.test-textarea{
+  color: $color_mono_1;
+  width: 100%; 
+  height: 200px;
+  border: 1px solid $color_mono_5;
   padding: $m1;
+}
+.test-en{
+  font-size: 1em;
+}
+.test-jp{
+  font-size: 0.8em;
 }
 /* about */
 .about{

@@ -2,15 +2,19 @@
 
 
 {% block content %}
-  <div class="container-fluid test-containter"><div class="row">
-    <div class="col-sm-12">
+  <div class="container-fluid test-containter">
+    <div class="row"><div class="col-sm-12">
       <p class="test-intro">Test typing with your font choices, 
         <span class="{{ en_font.style }}"><a href="/sort/en"> {{ en_font.name }} </a></span> for alphabet, 
         and <span class="{{ jp_font.style }}"><a href="/sort/jp" class="{{ jp_font.style }}">{{ jp_font.name }}</a></span>  for Japanse.</p>
-      <form method="post">
-        <textarea name="content" class="test-form {{ en_font.style }} {{jp_font.style }}" placeholder='Test writing'>{{ content }}</textarea>
-
-      </form>
     </div></div>
-  </div>
+    <div class="row no-gutter test-form">
+      <div class="col-sm-6">
+        <textarea name="content" class="test-textarea test-en {{ en_font.style }} {{jp_font.style }}" placeholder='Test writing with {{ en_font.name }}'></textarea>
+      </div>
+      <div class="col-sm-6">
+        <textarea name="content" class="test-textarea test-jp {{ en_font.style }} {{jp_font.style }}" placeholder='日本語入力テスト　with {{ jp_font.name}}'></textarea>
+      </div>
+    </div>
+  </div></div>
 {% endblock %}

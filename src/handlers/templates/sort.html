@@ -7,7 +7,7 @@
         <a href="/jplist">
           <h1>{{ ref_font.name }}</h1>
         </a>
-        <p class="top-intro"> This web app helps you to find similar fonts to your choice, looking at font balances and weight. I'm thinkng to add original time information... The following list is sorted according to each font similarity to
+        <p class="top-intro"> This web app helps you to find similar fonts to your choice, looking at font balances and weight. The following list is sorted according to each font similarity to
           <a href="/list/{{ view }}"><span class="top-font-link">{{ ref_font.name }}</span></a>.
         </p>
       </div>
@@ -24,7 +24,7 @@
             AHxMOpI We should get out to the country more often.<br>
           {% endif %}
         </div>
-        <span class="sort-caption">{{ ref_font.name }}: 0.00</span>
+        <span class="sort-caption">{{ ref_font.name }}, {{ ref_font.design }}: 0.00</span>
         <hr>
       </div>
     {% for font in fonts %}
@@ -40,7 +40,7 @@
             </a>
           {% endif %}
         </div>
-        <span class="sort-caption">{{ font.name }}: {{ font.distance }}</span>
+        <span class="sort-caption">{{ font.name }}, {{ font.design }}: {{ font.distance }}</span>
         <hr>
       </div>
     {% endfor %}

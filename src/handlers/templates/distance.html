@@ -17,18 +17,18 @@
     <div class="row"><div class="col-sm-12 dis-frame">
       <div class="tooltips dis-font dis-ref ref {{ ref_font.style }}"> 
         {% if ref_font.lang == 'jp' %}
-        あ
+        <div class="dis-jp">あ</div>
         {% else %}
-        A
+        <div class="dis-en">A</div>
         {% endif %}
         <span class="tooltipstext">{{ ref_font.name }}</span>
       </div>
       {% for font in fonts %}
         <div class="tooltips dis-font dis-else {{ font.style }}" style="{{ font.get_position() }}">  
           {% if font.lang == 'jp' %}
-            <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}">あ</a>
+            <a href="/{{ jp_lang }}/{{ font.style }}/{{ view }}"><div class="dis-jp">あ</div></a>
           {% else %}
-            <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}">A</a>
+            <a href="/{{ en_lang }}/{{ font.style }}/{{ view }}"><div class="dis-en">A</div></a>
           {% endif %}
           <span class="tooltipstext">{{ font.name }}</span>
         </div>

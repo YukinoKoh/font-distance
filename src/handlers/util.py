@@ -54,18 +54,18 @@ def calc_distance(ref_font, font_list):
         else:
             its_num = font.get_num()
             # compare width
-            dis_width = its_num[1] - ref_num[1]
+            dis_width = (its_num[1] - ref_num[1])*10
             # compare form balance
-            dis_form_b = its_num[2] - ref_num[2]
+            dis_form_b = (its_num[2] - ref_num[2])*10
             # compare line balance 
-            dis_line_b = abs(its_num[3] - ref_num[3])
+            dis_line_b = abs(its_num[3] - ref_num[3])*10
             # compare angle 
-            dis_angle = abs(its_num[4] - ref_num[4])
+            dis_angle = abs(its_num[4] - ref_num[4])*0.1
             # compare line thickness
-            dis_line = its_num[5] - ref_num[5]
+            dis_line = (its_num[5] - ref_num[5])*0.1
             # scaling
-            font.distance_v = dis_width + dis_form_b
-            font.distance_h = (dis_line_b + dis_angle)*dis_line
+            font.distance_v = (dis_width + dis_form_b)
+            font.distance_h = (dis_line_b + dis_angle + dis_line)
             font.distance = 0.0
             log_font.append(font)
         font.put()

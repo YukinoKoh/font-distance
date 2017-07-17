@@ -1,27 +1,49 @@
 /* google sans */
+/* typekit sans */
+/* typekit and open */
 /* google serif */
 /*typekit serif */
 /* common */
-/* google fonts */
-.noto_serif {
-  font-family: "Noto Serif"; }
-
+/* google sans */
 .noto_sans {
   font-family: "Noto Sans"; }
 
-/* typekit */
+/* typekit sans */
+.eurostile {
+  font-family: "eurostile"; }
+
+.franklin_gothic_urw {
+  font-family: "franklin-gothic-urw"; }
+
+.fira_sans {
+  font-family: "fira-sans-2"; }
+
+/* google fonts serif*/
+.noto_serif {
+  font-family: "Noto Serif"; }
+
+/* typekit serif*/
 .adobe_garamond {
   font-family: "adobe-garamond-pro"; }
 
-/* font styles */
-.helvetica {
-  font-family: "Helvetica", sans-serif; }
+.adobe_calson {
+  font-family: "adobe-caslon-pro"; }
 
-.libre_baskerville {
-  font-family: "Libre Baskerville", serif; }
+.baskerville_urw {
+  font-family: "baskerville-urw"; }
 
-.roboto {
-  font-family: "Roboto", sans-serif; }
+.bodoni_urw {
+  font-family: "bodoni-urw"; }
 
-.zilla_slab {
-  font-family: "Zilla Slab", serif; }
+/* common */
+.courier_new {
+  font-family: "Courier New"; }
+
+.georgia {
+  font-family: "Georgia"; }
+
+.times_new_roman {
+  font-family: "Times New Roman"; }
+
+.verdana {
+  font-family: "Verdana"; }

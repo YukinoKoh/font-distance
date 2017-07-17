@@ -19,7 +19,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/6.0
     angle = 9.8
     line_thickness = 5.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'Kozuka Mincho Pro'
     width = 99.0/96.0
@@ -27,7 +28,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/6.0
     angle = 8.7
     line_thickness = 6.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'Heisei Mincho StdN'
     width = 94.0/90.0
@@ -35,7 +37,8 @@ def insert_jp():
     yoko_tate_balance = 3.0/7.0
     angle = 7.5
     line_thickness = 5.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'Ryo Text PlusN'
     width = 98.0/94.0
@@ -43,7 +46,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/7.0
     angle = 12.2
     line_thickness = 4.5
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'Ryo Display PlusN'
     width = 97.0/95.0
@@ -51,7 +55,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/9.0
     angle = 12.5
     line_thickness = 6.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'Source Han Serif Japanese'
     width = 96.0/93.0
@@ -59,7 +64,8 @@ def insert_jp():
     yoko_tate_balance = 3.0/7.0
     angle = 9.3
     line_thickness = 5.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Ryoko Nishizuka, Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'A-OTF Ryumin PR6N'
     width = 95.0/93.0
@@ -67,7 +73,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/5.0
     angle = 9.7
     line_thickness = 6.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    deisgn = 'Morisawa' 
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     name = 'A-OTF Futo Min A101 PR6N'
     width = 94.0/94.0
@@ -75,7 +82,8 @@ def insert_jp():
     yoko_tate_balance = 2.0/7.0
     angle = 10.5
     line_thickness = 6.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    deisgn = 'Morisawa'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
     # google font 
     name = 'Sawarabi Mincho'
@@ -84,23 +92,20 @@ def insert_jp():
     yoko_tate_balance = 2.0/8.0
     angle = 9.8
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'mishio'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     category='gothic'
 
     # typekit
     name = 'A-OTF Bothic BBB Pr6N'
-    # width/height of Kanji
-    width = 47.0/47.0
-    # hiragane devided by kanji
-    form_balance = 37.0*37.0/(47.0*47.0)
-    # thinest diveded by thickest
-    yoko_tate_balance = 3.0/4.0
-    # horizontal line of hiragane
-    angle = 8.0
-    # thickness of vertical line of  hiragane
+    width = 94.0/91.0
+    form_balance = 80.0*87.0/(94.0*91.0)
+    yoko_tate_balance = 7.0/8.0
+    angle = 3.4
     line_thickness = 8.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Morisawa'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Heisei Kaku Gothic Std'
     width = 81.0/80.0
@@ -108,7 +113,8 @@ def insert_jp():
     yoko_tate_balance = 8.0/7.8
     angle = 5.8
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Ryo Gothic PlusN'
     width = 90.0/91.0
@@ -116,7 +122,8 @@ def insert_jp():
     yoko_tate_balance = 7.0/7.0
     angle = 5.7
     line_thickness = 7.8
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Source Han Sans Japanese'
     width = 88.0/89.0
@@ -124,7 +131,8 @@ def insert_jp():
     yoko_tate_balance = 7.0/8.0
     angle = 2.8
     line_thickness = 8.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Ryoko Nishizuka, Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Kozuka Gothic Pr6N'
     width = 81.0/80.0
@@ -132,7 +140,8 @@ def insert_jp():
     yoko_tate_balance = 6.0/6.0
     angle = 2.9
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Kozuka Gothic Pro'
     width = 81.0/81.0
@@ -140,7 +149,8 @@ def insert_jp():
     yoko_tate_balance = 6.0/6.0
     angle = 2.9
     line_thickness = 8.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Adobe'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     # google font
     name = 'Noto Sans Japanese'
@@ -149,7 +159,8 @@ def insert_jp():
     yoko_tate_balance = 8.0/8.0
     angle = 3.2
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Google'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Sawarabi Gothic'
     width = 95.0/91.0
@@ -157,7 +168,8 @@ def insert_jp():
     yoko_tate_balance = 7.0/8.0
     angle = 3.4
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'mishio'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Rounded Mplus 1c'
     width = 91.0/90.0
@@ -165,7 +177,8 @@ def insert_jp():
     yoko_tate_balance = 7.0/7.0
     angle = 0.0
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Jikasei Font Kobo'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
     name = 'Mplus 1p'
     width = 95.0/91.0
@@ -173,9 +186,10 @@ def insert_jp():
     yoko_tate_balance = 7.0/8.5
     angle = 0.0
     line_thickness = 7.0
-    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness)
+    design = 'Jikasei Font Kobo'
+    insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
 
-def insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness):
+def insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design):
     key_name = name.lower().replace(' ', '_')
     if not JpFamily.get_by_key_name(name):
         style = key_name
@@ -183,6 +197,6 @@ def insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line
                              category=category, width=width, 
                              form_balance=form_balance, style=style,
                              yoko_tate_balance=yoko_tate_balance, angle=angle, 
-                             line_thickness=line_thickness, distance_v=0.0,
+                             line_thickness=line_thickness, design=design, distance_v=0.0,
                              distance_h=0.0, distance=0.0, lang='jp').put()
 
