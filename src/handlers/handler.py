@@ -58,7 +58,7 @@ def select_font(func):
         if not self.jp:
             self.set_cookie('jp', 'kozuka_gothic_pro')
         if not self.en:
-            self.set_cookie('en', 'noto_sans')
+            self.set_cookie('en', 'adobe_garamond')
         if not self.latest:
             self.redirect('/jp/kozuka_gothic_pro/distance')
         else:
