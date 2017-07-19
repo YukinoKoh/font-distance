@@ -16,6 +16,7 @@ class EnFamily(db.Model):
     category = db.StringProperty(required=True,
                choices=('sans', 'serif', 'other'))
     width = db.FloatProperty(required=True)
+    w_width = db.FloatProperty(required=True)
     x_height = db.FloatProperty(required=True)
     m_serif = db.FloatProperty(required=True)
     h_stem_horizontal_balance = db.FloatProperty(required=True)
@@ -32,12 +33,16 @@ class EnFamily(db.Model):
     lang = db.StringProperty(required=True)
 
     def get_position(cls):
-        position_style = 'left: '+str(cls.distance_h*10+10)+'%;top :'+str(cls.distance_v*5+50)+'%'
+        position_style = 'left: '+str(cls.distance_h*8+50)+'%;top :'+str(cls.distance_v*8+50)+'%'
         return position_style
+
+    def get_svg(cls):
+        svg = 'font_en'+cls.style+'.svg'
+        return svg
 
     def get_num(cls):
         category = cls.category
-        width = cls.width
+        width = (cls.width + cls.w_width)/2
         x_height = cls.x_height
         m_serif = cls.m_serif
         h_stem_horizontal_balance = cls.h_stem_horizontal_balance
@@ -47,6 +52,6 @@ class EnFamily(db.Model):
         num1 = width
         num2 = x_height + p_decender
         num3 = h_stem_horizontal_balance
-        num4 = o_stroke_axis+m_serif + m_serif
+        num4 = o_stroke_axis+m_serif + m_serif*5
         num5 = i_line_thickness
         return category, num1, num2, num3, num4, num5 

@@ -67,7 +67,7 @@ def insert_jp():
     design = 'Ryoko Nishizuka, Adobe'
     insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
-    name = 'A-OTF Ryumin PR6N'
+    name = 'A-OTF Ryumin Pr6N'
     width = 95.0/93.0
     form_balance = 78.0*90.0/(95.0*93.0)
     yoko_tate_balance = 2.0/5.0
@@ -76,7 +76,7 @@ def insert_jp():
     deisgn = 'Morisawa' 
     insertJp(name, category, width, form_balance, yoko_tate_balance, angle, line_thickness, design)
     
-    name = 'A-OTF Futo Min A101 PR6N'
+    name = 'A-OTF Futo Min A101 Pr6N'
     width = 94.0/94.0
     form_balance = 71.0*87.0/(94.0*94.0)
     yoko_tate_balance = 2.0/7.0

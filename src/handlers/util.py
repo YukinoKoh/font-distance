@@ -58,14 +58,19 @@ def calc_distance(ref_font, font_list):
             # compare form balance
             dis_form_b = (its_num[2] - ref_num[2])*10
             # compare line balance 
-            dis_line_b = abs(its_num[3] - ref_num[3])*10
+            dis_line_b = (its_num[3] - ref_num[3])*5
             # compare angle 
-            dis_angle = abs(its_num[4] - ref_num[4])*0.1
+            dis_angle = (its_num[4] - ref_num[4])*0.1
             # compare line thickness
             dis_line = (its_num[5] - ref_num[5])*0.1
             # scaling
             font.distance_v = (dis_width + dis_form_b)
-            font.distance_h = (dis_line_b + dis_angle + dis_line)
+            if ref_font.category == 'serif' and font.category == 'mincho':
+                font.distance_h = pow(10/(dis_line_b + dis_angle + dis_line),2)
+            elif ref_font.category == 'mincho' and font.category == 'serif':
+                font.distance_h = pow(10/(dis_line_b + dis_angle + dis_line),2)
+            else:
+                font.distance_h = (dis_line_b + dis_angle + dis_line)
             font.distance = 0.0
             log_font.append(font)
         font.put()

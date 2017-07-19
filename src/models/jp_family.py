@@ -23,7 +23,7 @@ class JpFamily(db.Model):
     lang = db.StringProperty(required=True)
 
     def get_position(cls):
-        position_style = 'left: '+str(cls.distance_h*10+10)+'%;top :'+str(cls.distance_v*5+50)+'%'
+        position_style = 'left: '+str(cls.distance_h*10+50)+'%;top :'+str(cls.distance_v*10+50)+'%'
         return position_style
 
     def get_num(cls):
