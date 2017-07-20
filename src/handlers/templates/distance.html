@@ -2,6 +2,18 @@
 
 
 {% block content %}
+  {% if intro=='yes' %}
+  <div id="introduction" class="overlay">
+    <div class="overlay-content">
+      <h3>Font Distance</h3>
+       <p class="intro-text">This app is for people looking for another view to font relationships.<br>
+       You can tap 'A' or 'あ' to start a try.</p>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Let's try</a><br>
+       <p class="intro-text"><a href="/about">Read more about this project here.</a></p> 
+    </div>
+  </div>
+  {% endif %}
+
   <div class="container"><div class="row">
     <div class="col-sm-12 mb-3">
       <div class="{{ ref_font.style }}">

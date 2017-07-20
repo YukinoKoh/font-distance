@@ -3,14 +3,21 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+$color_attention: #ef8376;
+$color_attention1: #f4d8dd;
+
 $color_mono_1: #061f26;
 $color_mono_2: #232323;
-$color_mono_3: #525252;
-$color_mono_3a: #a3a3a3;
+$color_mono_2a: #3a3a3a;
+$color_mono_3: #515e65;
+$color_mono_3a: #7a7a7a;
+$color_mono_3b: #a3a3a3;
 $color_mono_4: #ababab;
 $color_mono_5: #dcdddf;
 $color_mono_6: #e3e3e3;
+$color_mono_6a: #ebecee;
 $color_mono_7: #f0f1f3;
+$color_mono_8: #f0f0f1;
 
  body {
     overflow-x: hidden;
@@ -38,7 +45,7 @@ $color_mono_7: #f0f1f3;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: $color_mono_2;
+    background: $color_attention;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -82,13 +89,20 @@ $color_mono_7: #f0f1f3;
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: $color_mono_3a;
 }
 
-.sidebar-nav li a:hover {
-    text-decoration: none;
+.sidebar-link a {
     color: #fff;
-    background: $color_mono_4;
+}
+
+.sidebar-select a {
+    color: $color_mono_2;
+}
+
+.sidebar-link a:hover, .sidebar-select a:hover {
+    text-decoration: none;
+    color: $color_mono_3;
+    background: #fff;
 }
 
 .sidebar-nav li a:active,

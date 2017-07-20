@@ -8,16 +8,20 @@ $font-size: $font_size_4;
 
 $color_mono_1: #061f26;
 $color_mono_2: #212121;
-$color_mono_3: #525252;
-$color_mono_3a: #a3a3a3;
+$color_mono_2a: #3a3a3a;
+$color_mono_3: #515e65;
+$color_mono_3a: #7a7a7a;
+$color_mono_3b: #a3a3a3;
 $color_mono_4: #ababab;
 $color_mono_5: #dcdddf;
 $color_mono_6: #e3e3e3;
+$color_mono_6a: #ebecee;
 $color_mono_7: #f0f1f3;
+$color_mono_8: #f0f0f2;
 
 $color_brand_1: $color_mono_3;
-$color_attention: #ff716d;
-$color_attention1: #fa3942;
+$color_attention1: #ff716d;
+$color_attention: #ef8376;
 
 $font_title_weight: 300;
 $font_title_color: #fff;
@@ -89,6 +93,13 @@ h2{
   font-family: 'helvetica', sans-serif;
 }
 
+h3{
+  color: #fff;
+  font-size: $font_size_2;
+  font-weight: 600;
+  font-family: 'helvetica', sans-serif;
+}
+
 a:hover{
   text-decoration: none;
 }
@@ -134,13 +145,74 @@ a:hover{
   color: $color_mono_4;
 }
 .top-font-link{
-  color: $color_mono_1;
+  color: $color_attention;
   text-decoration: underline;
 }
 
 .top-icon{
   width: 30px;
 }
+
+/* intro */
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(239, 131, 118, 0.95);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.intro-text{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: $font_size;
+}
+.intro-text a{
+    color: #fff;
+    text-decoration: underline;
+    font-size: $font_size;
+}
+.closebtn {
+    background-color: #fff;
+    margin: 0 auto;
+    border: none;
+    color: $color_attention;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    width: 300px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 
 /* distance */
 .dis-frame{
@@ -152,7 +224,7 @@ a:hover{
   width: 24px;
 }
 .dis-jp{
-  width: 20px;
+  width: 22px;
 }
 
 .dis-font, .dis-font a{
@@ -214,17 +286,17 @@ a:hover{
 
 /* Font list page */
 .list-bg{
-  background-color: $color_mono_4;
+  background-color: $color_mono_8;
 }
 .list-fonts{
   margin: $m2;
 }
 .list-font, .list-font a{
-  color: #fff;
+  color: $color_mono_1;
 }
 
 .list-caption{
-  color: $color_mono_3;
+  color: $color_mono_4;
   font-size: $font_size_5;
   margin: $m3 0 $m1 $m2;
 }
@@ -232,7 +304,7 @@ a:hover{
 .list-hr{
   margin: $m1 0;
   border: 0;
-  border-bottom: 1px solid $color_mono_3a;
+  border-bottom: 1px solid $color_mono_6;
 }
 /* Font sort */
 .sort-font{
@@ -248,7 +320,7 @@ a:hover{
 
 /* test */
 .test-containter{
-  background-color: $color_mono_5;
+  background-color: $color_mono_8;
   height: 100vh;
 }
 .test-intro{
@@ -256,7 +328,7 @@ a:hover{
   margin: $m2 0;
 }
 .test-intro a{
-  color: $color_mono_1;
+  color: $color_attention;
   text-decoration: underline;
 }
 .test-form{
@@ -266,7 +338,7 @@ a:hover{
   color: $color_mono_1;
   width: 100%; 
   height: 200px;
-  border: 1px solid $color_mono_5;
+  border: 1px solid $color_mono_8;
   padding: $m1;
 }
 .test-en{
@@ -278,9 +350,12 @@ a:hover{
 /* about */
 .about{
   color: $color_mono_3;
-  font-family: 'adobe-garamond-pro';
+  font-family: 'adobe-caslon-pro';
 }
 .about a{
   color: $color_mono_2;
   text-decoration: underline;
+}
+.about-nav a{
+  color: $color_attention;
 }

@@ -47,6 +47,19 @@ class Handler(webapp2.RequestHandler):
         self.jp = self.request.cookies.get('jp')
         self.en = self.request.cookies.get('en')
         self.latest = self.request.cookies.get('latest')
+        self.visit = self.request.cookies.get('visit')
+
+    def get_intro(self):
+        intro = ''
+        if not self.visit:
+            self.set_cookie('visit', 0)
+            intro = 'yes'
+        else:
+            val = self.request.cookies.get('visit')
+            val = int(val)+1
+            self.set_cookie('visit', val)
+            intro = 'no'
+        return intro
 
 def select_font(func):
     """

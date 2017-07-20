@@ -35,11 +35,16 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a id="menu-close"><img class="top-icon" src="/img/icon_close.svg"></a></li>
-                <li><a href="/">Font Distance</a></li>
-                <li><a href="/sort/jp">Similar Fonts (JP)</a></li>
-                <li><a href="/sort/en">Similar Fonts (En)</a></li>
-                <li><a href="/typeset">Font Test</a></li>
-                <li><a href="/about">About</a></li>
+                <li {% if view=='distance' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
+                  <a href="/">Font Distance</a></li>
+                <li {% if view=='sort-jp' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
+                  <a href="/sort/jp">Similar Fonts (JP)</a></li>
+                <li {% if view=='sort-en' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
+                  <a href="/sort/en">Similar Fonts (En)</a></li>
+                <li {% if view=='typeset' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
+                  <a href="/typeset">Font Test</a></li>
+                <li {% if view=='about' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
+                  <a href="/about">About</a></li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -70,6 +75,9 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+    function closeNav() {
+      document.getElementById("introduction").style.height = "0%";
+    }
     </script>
   </body>
 </html>
