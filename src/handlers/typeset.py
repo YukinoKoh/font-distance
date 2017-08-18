@@ -7,10 +7,10 @@ from handler import select_font
 class Typeset(Handler):
     @select_font
     def get(self):
-        en_font = util.get_font(self.en, 'en')
-        jp_font = util.get_font(self.jp, 'jp')
         view = 'typeset'
-        self.render("typeset.html", en_font=en_font, jp_font=jp_font,
+        select_font = util.get_selected_font(self.jp, self.en)
+        self.render("typeset.html", 
+                    jp_font=select_font[0], en_font=select_font[1],
                     view=view, sitename=settings.SITENAME)
 
 

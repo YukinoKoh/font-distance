@@ -73,6 +73,12 @@ a:hover {
 .top-title a {
   color: #fff; }
 
+.top-info {
+  font-size: 30px;
+  color: #dcdddf;
+  padding: 4px;
+  vertical-align: sub; }
+
 .top-intro {
   color: #ababab; }
 
@@ -265,3 +271,44 @@ a:hover {
 
 .about-nav a {
   color: #ef8376; }
+
+.footer {
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 56px;
+  width: 100%;
+  padding: 8px;
+  line-height: 8px;
+  -webkit-box-shadow: 0px -2px 5px 0px #cccccc;
+  -moz-box-shadow: 0px -2px 5px 0px #cccccc;
+  box-shadow: 0px -2px 5px 0px #cccccc; }
+
+.footer-caption {
+  font-size: 8px;
+  line-height: 8px;
+  padding: 0; }
+
+.footer-caption-jp {
+  font-size: 7px;
+  line-height: 7px;
+  padding: 0; }
+
+.footer-icon {
+  padding: 4px;
+  height: 28px; }
+
+.footer-icon-jp {
+  padding: 4px;
+  height: 26px; }
+
+.footer-select, .footer-select a {
+  color: #ef8376; }
+
+.footer-link a {
+  color: #000; }
+
+.footer-sub {
+  opacity: 0.6; }

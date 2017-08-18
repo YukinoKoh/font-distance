@@ -20,7 +20,9 @@ class Distance(Handler):
         intro = self.get_intro()
         view = 'distance'
         fonts = util.get_distance_list(select_font, select_lang)
+        select_font = util.get_selected_font(self.jp, self.en)
         # self.response.out.write(select_font)
         self.render("distance.html", ref_font=fonts[0], fonts=fonts[1], intro=intro, view=view,
-                    en_lang=settings.EN, jp_lang=settings.JP, sitename=settings.SITENAME)
+                    en_lang=settings.EN, jp_lang=settings.JP, jp_font=select_font[0],
+                    en_font=select_font[1], sitename=settings.SITENAME)
 

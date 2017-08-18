@@ -15,6 +15,11 @@ def get_distance_list(select_font, select_lang):
     return ref_font, log_font
 
 
+def get_selected_font(select_font_jp, select_font_en):
+    jp_font = JpFamily.get_by_key_name(select_font_jp)
+    en_font = EnFamily.get_by_key_name(select_font_en)
+    return jp_font, en_font 
+
 def get_log_list(select_font, select_lang):
     ref_font = get_font(select_font, select_lang)
     if select_lang == 'jp':

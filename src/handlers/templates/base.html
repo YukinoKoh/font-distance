@@ -13,6 +13,8 @@
     <script src="https://use.typekit.net/ewm7tjr.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" />
@@ -29,10 +31,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-  <div id="wrapper">
+  <!--<div id="wrapper">
 
-     <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+      Sidebar 
+     <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a id="menu-close"><img class="top-icon" src="/img/icon_close.svg"></a></li>
                 <li {% if view=='distance' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
@@ -46,26 +48,59 @@
                 <li {% if view=='about' %}class="sidebar-select" {% else %}class="sidebar-link"{% endif %}>
                   <a href="/about">About</a></li>
             </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-    <div id="page-content-wrapper">
+    </div>
+    <!--<div id="page-content-wrapper">-->
     <div class="container-fluid top-header"><div class="row top">
       <div class="col-sm-12"> 
         <div class="top-title">
-          <a href="#menu-toggle" class="sidebar-btn" id="menu-toggle"><img class="top-icon" src="/img/icon_hamburger.svg"></a>
+          <!--<a href="#menu-toggle" class="sidebar-btn" id="menu-toggle"><img class="top-icon" src="/img/icon_hamburger.svg"></a>-->
           <a href="/">
             {{ sitename }}
           </a>
+          <a href="/about"><i class="material-icons top-info">info_outline</i></a>
         </div>
       </div>
     </div></div>
 
-
     {% block content %}
     {% endblock %}
-    </div>
+    <div class="container-fluid footer"><div class="row">
+      <div class="col-sm-3">
+        <div {% if view=='distance' %}class="footer-select" {% else %}class="footer-link footer-sub"{% endif %}>
+          <a href="/"><i class="material-icons footer-icon footer-sub">explore</i><br><span class="footer-caption">Explore</span></a></div>
+      </div>
+      <div class="col-sm-3">
+         {% if view=='sort-jp' %}
+           <div class="footer-select">
+             <img src="/img/font_jp_{{ jp_font.style }}_s.svg" class="footer-icon-jp" alt="あ">
+             <br><span class="footer-caption">Japanese font</span></div>
+         {% else %}
+           <div class="footer-link footer-sub">
+             <a href="/sort/jp"><img src="/img/font_jp_{{ jp_font.style }}.svg" class="footer-icon-jp footer-sub" alt="あ">
+             <br><span class="footer-caption">Japanese font</span></a></div>
+         {% endif %}
+      </div>
+      <div class="col-sm-3">
+         {% if view=='sort-en' %}
+           <div class="footer-select">
+             <img src="/img/font_en_{{ en_font.style }}_s.svg" class="footer-icon" alt="A">
+             <br><span class="footer-caption">Alphabet font</span></div>
+         {% else %}           
+           <div class="footer-link footer-sub">
+             <a href="/sort/en"><img src="/img/font_en_{{ en_font.style }}.svg" class="footer-icon footer-sub" alt="A">
+             <br><span class="footer-caption">Alphabet font</span></a></div>
+         {% endif %}
+
+      </div>
+      <div class="col-sm-3">
+        <div {% if view=='typeset' %}class="footer-select" {% else %}class="footer-link footer-sub"{% endif %}>
+          <a href="/typeset"><i class="material-icons footer-icon footer-sub">edit</i><br><span class="footer-caption">Test font</span></a></div>
+      </div>
+    </div></div>
+
+    <!-- toggle menu </div>
   </div>
-    <!-- Menu Toggle Script -->
+     Menu Toggle Script
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -78,6 +113,6 @@
     function closeNav() {
       document.getElementById("introduction").style.height = "0%";
     }
-    </script>
+    </script>-->
   </body>
 </html>

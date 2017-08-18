@@ -4,6 +4,8 @@ $font_size_1: 48px;
 $font_size_2: 20px;
 $font_size_4: 16px;
 $font_size_5: 14px;
+$font_size_6: 8px;
+$font_size_7: 7px;
 $font-size: $font_size_4;
 
 $color_mono_1: #061f26;
@@ -139,6 +141,12 @@ a:hover{
 
 .top-title a{
   color: $font_title_color;
+}
+.top-info{
+  font-size: 30px;
+  color: $color_mono_5;
+  padding: $m0;
+  vertical-align: sub;
 }
 
 .top-intro{
@@ -358,4 +366,47 @@ a:hover{
 }
 .about-nav a{
   color: $color_attention;
+}
+
+.footer{
+  background: #fff;
+  text-align: center; 
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: $m7;
+  width: 100%;
+  padding: $m1;
+  line-height: $font_size_6;
+  -webkit-box-shadow: 0px -2px 5px 0px rgba(204,204,204,1);
+  -moz-box-shadow: 0px -2px 5px 0px rgba(204,204,204,1);
+  box-shadow: 0px -2px 5px 0px rgba(204,204,204,1);
+
+}
+.footer-caption{
+  font-size: $font_size_6; 
+  line-height: $font_size_6;
+  padding: 0;
+}
+.footer-caption-jp{
+  font-size: $font_size_7;
+  line-height: $font_size_7;
+  padding: 0;
+}
+.footer-icon{
+  padding: $m0;
+  height: 28px;
+}
+.footer-icon-jp{
+  padding: $m0;
+  height: 26px;
+}
+.footer-select, .footer-select a{
+  color: $color_attention;
+}
+.footer-link a{
+  color: #000;
+}
+.footer-sub{
+  opacity: 0.6;
 }

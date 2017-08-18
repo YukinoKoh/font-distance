@@ -5,5 +5,5 @@ def init():
     SITENAME = 'Font Distance'
     EN = 'en'
     JP = 'jp'
-
+    
 
