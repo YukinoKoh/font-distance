@@ -52,11 +52,8 @@ $ dev_appserver.py .
 
 4. Install [Grunt](https://gruntjs.com/), if you want to use `Gruntfile.js` to run sass compiler.
 
-## Usage
 
-
-### To modify formula to calcurate font similarity 
-#### Change the fomula
+## To modify formula to calcurate font similarity 
 The fomula is written in `util.py` in `src/handlers`.
 
 ```python
@@ -90,23 +87,24 @@ else:
     font.distance_h = (dis_line_b + dis_angle + dis_line)
 ```
 
-### Add font
-##### Add font data
+## To add font data
+##### 1. Add font data
 To add Japanese font data, write additional code in `src/handlers/jp_center.py`, which data structure is described [here](#japanese-font-data).
 
 To add English font data, write additional code in `src/handlers/en_center.py`, which data structure is described [here](#english-font-data).
 
-#### Show the additional data in the web app
-1. Add font source data in the header of `src/handlers/templates/base.html`
-2. Specify font family in `src/css/jp_font.css` or `src/css/en_font.css`.
+#### 2. Show the additional data in the web app
+- Add font source data in the header of `src/handlers/templates/base.html`
+- Specify font family in `src/css/jp_font.css` or `src/css/en_font.css`.
 ```css
 .noto_serif {
   font-family: "Noto Serif"; }
 ```
-This style is named based on the `name` written in the data `jp_center.py` or `en_center.py`. Any space in `name` will be replaced with `-` and all uppercase will be replaced with its lowercase. For example, *Noto Serif* will be *noto_serif*.
+This style name should be defined based on the `name` written in the data `jp_center.py` or `en_center.py`. Any space in `name` will be replaced with `-` and all uppercase will be replaced with its lowercase. 
+For example, *Noto Serif* will be *noto_serif*.
   
 
-### Japanese font data
+## Japanese font data
 Japanese font data is defined in `src/handlers/jp_center.py` as the following:
 - `width`: width / height
 - `form_balabce`: hiragana 'a' / kanji 'ei' area
@@ -124,7 +122,7 @@ Japanese font data is defined in `src/handlers/jp_center.py` as the following:
 
 ![JP font data: line thickness](img/jp_line.jpg)
 
-### English font data
+## English font data
 English font data is defined in `src/handlers/en_center.py` as the following:
 - `width`: x A width / A height
 - `x height`: x height / cap height
@@ -143,7 +141,8 @@ English font data is defined in `src/handlers/en_center.py` as the following:
 ![EN font data: other](img/en_etc.jpg)
 
 ## Look for
-I'm currently look for some idea to show font similarity visualization ([this](https://font-distance.appspot.com/)) without overlapping each fonts. If you have any ideas, let me know!
+I'm currently look for some idea to show font similarity visualization ([this](https://font-distance.appspot.com/)) without overlapping individual fonts.
+If you have any ideas, let me know!
 
 ## Deploy App Engine
 1. Direct to `src` in terminal (if Mac).
