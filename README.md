@@ -88,7 +88,7 @@ else:
 ```
 
 ## To add font data
-##### 1. Add font data
+#### 1. Add font data
 To add Japanese font data, write additional code in `src/handlers/jp_center.py`, which data structure is described [here](#japanese-font-data).
 
 To add English font data, write additional code in `src/handlers/en_center.py`, which data structure is described [here](#english-font-data).
@@ -140,9 +140,8 @@ English font data is defined in `src/handlers/en_center.py` as the following:
 
 ![EN font data: other](img/en_etc.jpg)
 
-## Look for
-I'm currently look for some idea to show font similarity visualization ([this](https://font-distance.appspot.com/)) without overlapping individual fonts.
-If you have any ideas, let me know!
+## If you can ...
+If you have some idea to show font similarity visualization ([this](https://font-distance.appspot.com/)) without overlapping individual fonts, please let me know!
 
 ## Deploy App Engine
 1. Direct to `src` in terminal (if Mac).
