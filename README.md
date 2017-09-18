@@ -80,18 +80,23 @@ dis_angle = (its_num[4] - ref_num[4])*0.1
 dis_line = (its_num[5] - ref_num[5])*0.1
 ```
 
-#### Change the font data
-I defined each font data in `src/handlers/jp_center.py` and `src/handlers/en_center.py`.
-  
-#### Japanese font data
-I defined Japanese font data in `jp_center.py` as the following.:
+### Change Japanese font data
+Japanese font data is defined in `src/handlers/jp_center.py` as the following:
 - `width`: width / height
-![JP font data: width](img/jp_width.jpg)
 - `form_balabce`: hiragana 'a' / kanji 'ei' area
 - `yoko_tate_balance`: yokosen height / tatesen width of kanji'ei'
 - `angle`: yokosen of hiragana 'a'
 - `line_thickness`: chrome 500% screen capture font-size: 20px
 
+![JP font data: width](img/jp_width.jpg)
+
+![JP font data: form balance](img/jp_form.jpg)
+
+![JP font data: yoko tate balance](img/jp_yoko_tate.jpg)
+
+![JP font data: angle](img/jp_angle.jpg)
+
+![JP font data: line thickness](img/jp_line.jpg)
 
 ## Deploy App Engine
 1. Direct to `src` in terminal (if Mac).
