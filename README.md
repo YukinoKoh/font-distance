@@ -98,6 +98,21 @@ Japanese font data is defined in `src/handlers/jp_center.py` as the following:
 
 ![JP font data: line thickness](img/jp_line.jpg)
 
+### Change Japanese font data
+English font data is defined in `src/handlers/en_center.py` as the following:
+- `width`: x A width / A height
+- `x height`: x height / cap height
+- `m serif`: serif length of m 500% chrome screen - font-size 20px
+- `h_stem_horizontal_balance`: H horizontal height / H stem width
+- `o_stroke_axis`: angle 0 - vertical  
+- `p_decender`: p decender / caps height 
+- `i_line_thickness`: thickness of i 500% chrome screen - font-size 20px
+
+![EN font data: width](img/en_width.jpg)
+
+![EN font data: x height](img/en_xheight.jpg)
+
+
 ## Deploy App Engine
 1. Direct to `src` in terminal (if Mac).
 2. Run the following command.
