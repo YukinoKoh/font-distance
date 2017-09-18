@@ -31,10 +31,12 @@ class List(Handler):
         jp_sans_list = JpFamily.all().filter('category =','gothic')
         jp_serif_list = JpFamily.all().filter('category =','mincho')
         ref_font = util.get_font(select_font, select_lang)
+        select_font = util.get_selected_font(self.jp, self.en)
 
         self.render('list.html', en_sans_list=en_sans_list,
                     en_serif_list=en_serif_list, jp_sans_list=jp_sans_list,
                     jp_serif_list=jp_serif_list,
                     ref_font=ref_font, view=view, jp_lang=settings.JP, en_lang=settings.EN,
+                    jp_font=select_font[0], en_font=select_font[1],
                     sitename=settings.SITENAME)
 
