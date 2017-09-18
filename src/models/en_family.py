@@ -9,7 +9,7 @@ class EnFamily(db.Model):
     # m serif = serif length of m 500% chrome screen - font-size 20px
     # h_stem_horizontal_balance = H horizontal height / H stem width
     # o_stroke_axis = angle 0 - vertical  
-    # p_decender = length of p decender / cap height
+    # p_descender = length of p descender / cap height
     # i_line_thickness: thickness of i 500% chrome screen - font-size 20px
     name = db.StringProperty(required=True)
     style = db.StringProperty(required=True)
@@ -21,10 +21,10 @@ class EnFamily(db.Model):
     m_serif = db.FloatProperty(required=True)
     h_stem_horizontal_balance = db.FloatProperty(required=True)
     o_stroke_axis = db.FloatProperty(required=True)
-    p_decender = db.FloatProperty(required=True)
+    p_descender = db.FloatProperty(required=True)
     i_line_thickness = db.FloatProperty(required=True)
     design = db.StringProperty(required=True)
-    # aggregation of width, x-height, decender
+    # aggregation of width, x-height, descender
     distance_v = db.FloatProperty(required=True)
     # aggregation of m_serif, stem-horizontal, stroke axis, line thickness
     distance_h = db.FloatProperty(required=True)
@@ -47,10 +47,10 @@ class EnFamily(db.Model):
         m_serif = cls.m_serif
         h_stem_horizontal_balance = cls.h_stem_horizontal_balance
         o_stroke_axis = cls.o_stroke_axis
-        p_decender  = cls.p_decender
+        p_descender  = cls.p_descender
         i_line_thickness = cls.i_line_thickness
         num1 = width
-        num2 = x_height + p_decender
+        num2 = x_height + p_descender
         num3 = h_stem_horizontal_balance
         num4 = o_stroke_axis+m_serif + m_serif*5
         num5 = i_line_thickness

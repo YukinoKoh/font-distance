@@ -105,12 +105,16 @@ English font data is defined in `src/handlers/en_center.py` as the following:
 - `m serif`: serif length of m 500% chrome screen - font-size 20px
 - `h_stem_horizontal_balance`: H horizontal height / H stem width
 - `o_stroke_axis`: angle 0 - vertical  
-- `p_decender`: p decender / caps height 
+- `p_sdecender`: p descender / caps height 
 - `i_line_thickness`: thickness of i 500% chrome screen - font-size 20px
 
 ![EN font data: width](img/en_width.jpg)
 
 ![EN font data: x height](img/en_xheight.jpg)
+
+![EN font data: balance](img/en_hbalance.jpg)
+
+![EN font data: other](img/en_etc.jpg)
 
 
 ## Deploy App Engine
