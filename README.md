@@ -1,8 +1,8 @@
 ![Sample image](img/sample_screen.jpg)
 
-It's a web app to find font, using [Google App Engine with Python](https://cloud.google.com/python/) and a Python template engine [Jinja2](http://jinja.pocoo.org/).
+It's a web app to find font, using [Google App Engine with Python](https://cloud.google.com/python/) and a Python template engine [Jinja2](http://jinja.pocoo.org/). You can find this web app [here](https://font-distance.appspot.com/). 
 
-You can find sample [here](https://font-distance.appspot.com/).
+[This](https://github.com/YukinoKoh/font-distance/blob/master/170919_uxtalktokyo.pdf) is a slife file for [UX Talk Tokyo](http://www.uxtalktokyo.com/announcing-ux-talk-tokyo-39/) about *UX around Machine Learning*.
 
 This app includes..
 - Visualized font relationship page
