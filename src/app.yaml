@@ -5,10 +5,17 @@ threadsafe: true
 handlers:
 - url: /img
   static_dir: img
+  secure: always
 - url: /css
   static_dir: css
+  secure: always
 - url: /.*
   script: main.app
+  secure: always
+# - url: sw.js
+#   static_files: sw.js
+#   upload: sw.js 
+#   secure: always
 
 libraries:
 - name: jinja2

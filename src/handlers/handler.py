@@ -69,11 +69,11 @@ def select_font(func):
         insert_jp()
         insert_en()
         if not self.jp:
-            self.set_cookie('jp', 'kozuka_gothic_pro')
+            self.set_cookie('jp', 'noto_sans_japanese')
         if not self.en:
-            self.set_cookie('en', 'adobe_garamond')
+            self.set_cookie('en', 'noto_sans')
         if not self.latest:
-            self.redirect('/jp/kozuka_gothic_pro/distance')
+            self.redirect('/jp/noto_sans_japanese/distance')
         else:
             func(self, *args, **kwargs)
     return set_font
